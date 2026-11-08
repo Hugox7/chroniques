@@ -1,0 +1,8 @@
+'use client';
+import Shell from '@/components/shell';
+import {useEffect,useState} from 'react';
+import {supabase} from '@/lib/supabase';
+export default function Settings(){const [id,setId]=useState(''),[username,setUsername]=useState(''),[message,setMessage]=useState(''),[busy,setBusy]=useState(false);
+useEffect(()=>{(async()=>{const s=supabase();const {data:{user}}=await s.auth.getUser();if(!user)return;setId(user.id);const {data}=await s.from('profiles').select('username').eq('id',user.id).maybeSingle();setUsername(data?.username||'')})()},[]);
+async function save(e:React.FormEvent){e.preventDefault();setMessage('');if(!id)return;const name=username.trim();if(!/^[A-Za-z0-9_]{3,24}$/.test(name)){setMessage('3 à 24 caractères : lettres, chiffres et _.');return}setBusy(true);const {error}=await supabase().from('profiles').update({username:name}).eq('id',id);setBusy(false);setMessage(error?.code==='23505'?'Ce pseudonyme est déjà pris.':error?.message||'Pseudonyme enregistré. Rechargez la page pour le voir dans l’en-tête.')}
+return <Shell><div className="page-head"><span className="eyebrow">VOTRE IDENTITÉ</span><h1>Mon profil</h1><p>Ce pseudonyme apparaît dans les campagnes et les discussions, indépendamment de vos personnages.</p></div><div className="panel form-panel"><form onSubmit={save}><label className="field-label">PSEUDONYME</label><input className="field" required minLength={3} maxLength={24} pattern="[A-Za-z0-9_]+" value={username} onChange={e=>setUsername(e.target.value)}/><p className="hint">Lettres, chiffres et tiret bas (_), 3 à 24 caractères.</p><button className="btn gold" disabled={busy||!id}>Enregistrer</button>{message&&<div className="notice" role="status">{message}</div>}</form></div></Shell>}

@@ -1,0 +1,48 @@
+name: Supabase daily keepalive
+
+on:
+  schedule:
+    # 03:00 UTC every day (04:00 France winter / 05:00 summer)
+    - cron: "0 3 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: supabase-keepalive
+  cancel-in-progress: false
+
+jobs:
+  keepalive:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+      SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+    steps:
+      - name: Check secrets are configured
+        shell: bash
+        run: |
+          if [[ -z "$SUPABASE_URL" || -z "$SUPABASE_SERVICE_ROLE_KEY" ]]; then
+            echo "Missing GitHub Actions secrets: SUPABASE_URL and/or SUPABASE_SERVICE_ROLE_KEY" >&2
+            exit 1
+          fi
+      - name: Read Supabase database three times
+        shell: bash
+        run: |
+          set -euo pipefail
+          for attempt in 1 2 3; do
+            # Read-only PostgREST query; no data printed to workflow logs.
+            curl --fail --silent --show-error --retry 2 --retry-delay 3 \
+              --connect-timeout 10 --max-time 25 \
+              --output /dev/null \
+              --get \
+              --data-urlencode 'select=id' \
+              --data-urlencode 'limit=1' \
+              --header "apikey: ${SUPABASE_SERVICE_ROLE_KEY}" \
+              --header "Authorization: Bearer ${SUPABASE_SERVICE_ROLE_KEY}" \
+              "${SUPABASE_URL%/}/rest/v1/profiles"
+            echo "Supabase database read ${attempt}/3 succeeded"
+            if [[ "$attempt" -lt 3 ]]; then sleep 5; fi
+          done

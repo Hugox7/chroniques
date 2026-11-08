@@ -46,3 +46,5 @@ jobs:
             echo "Supabase database read ${attempt}/3 succeeded"
             if [[ "$attempt" -lt 3 ]]; then sleep 5; fi
           done
+
+# Supabase keepalive workflow

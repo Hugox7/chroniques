@@ -1,0 +1,7 @@
+{
+  "version": "0.19.31",
+  "assets_referenced": 61,
+  "issues": [],
+  "sample_composites": 6,
+  "note": "Contrôle structurel et planche visuelle; pas de test navigateur ni compilation Next.js."
+}

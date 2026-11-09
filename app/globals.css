@@ -12,3 +12,26 @@
 
 /* V0.15 recent companions */
 .recent-companions{margin-top:26px;padding-top:18px;border-top:1px solid var(--line)}.recent-companions h3{font-size:15px;margin-bottom:8px}.companion-row{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:11px 0;border-bottom:1px solid var(--line)}.companion-row span{display:grid;gap:4px;min-width:0;overflow-wrap:anywhere}.companion-row strong{font-size:13px}.companion-row small{font-size:11px;color:var(--muted)}.companion-row .btn{flex-shrink:0}.companion-row button:disabled{opacity:.55;cursor:wait}
+
+/* V0.19.14 — Campagne et séance */
+.campaign-status-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+.campaign-danger-zone{border-top:1px solid var(--line);margin-top:24px;padding-top:10px}
+.campaign-member-list .campaign-member:last-child{border-bottom:0}
+.campaign-member-chip{display:inline-flex;align-items:center;padding:5px 9px;border:1px solid #9b8152;background:#393424;color:#f2d59b!important;border-radius:999px;font-size:11px}
+.campaign-member-character{color:var(--goldlight)!important;font-weight:700}
+.campaign-member-role{color:var(--muted)!important;font-size:11px}
+.session-active-banner{display:flex;align-items:flex-start;gap:12px;padding:17px;margin-bottom:22px;border:1px solid #62845b;background:#253729;border-radius:6px}
+.session-active-banner strong{color:#bde3ae;font-size:15px}
+.session-active-banner p{color:var(--muted);font-size:12px;margin:6px 0 0}
+.session-live-dot{width:10px;height:10px;border-radius:50%;background:#8bc17d;flex-shrink:0;margin-top:4px;box-shadow:0 0 0 4px #8bc17d22}
+
+/* Character sheet: gameplay first */
+.sheet-identity{display:grid;grid-template-columns:minmax(170px,235px) minmax(0,1fr) auto;gap:24px;align-items:start;background:linear-gradient(120deg,#273329,#19221c);border:1px solid #535840;padding:22px;margin:5px 0 20px}.sheet-identity-main{min-width:0;padding-top:8px}.sheet-identity-main h1{margin:12px 0 8px;font-size:clamp(27px,3.5vw,46px);overflow-wrap:anywhere}.sheet-identity-main p{font-size:13px;color:var(--muted);line-height:1.6}.sheet-portrait{min-width:0}.sheet-portrait>section{margin-top:0!important}.sheet-portrait h3{font-size:13px;margin:0 0 10px}.sheet-portrait img{width:100%!important;max-width:100%;height:auto;display:block}.sheet-portrait .btn{width:100%;white-space:normal}.sheet-quick-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px;margin-top:23px}.sheet-quick-stats>div{background:#141e17;border:1px solid #3c4b3b;padding:12px 10px}.sheet-quick-stats small{display:block;font-size:9px;letter-spacing:.08em;color:var(--muted)}.sheet-quick-stats strong{display:block;font:20px Cinzel;color:var(--goldlight);margin-top:8px}@media(max-width:1050px){.sheet-identity{grid-template-columns:minmax(140px,200px) minmax(0,1fr)}.sheet-identity>.level-seal{grid-column:2;grid-row:1;justify-self:end;width:70px;height:70px}.sheet-identity-main{padding-top:75px}}@media(max-width:700px){.sheet-identity{grid-template-columns:110px minmax(0,1fr);gap:14px;padding:13px}.sheet-identity-main{padding-top:0}.sheet-identity-main h1{font-size:26px}.sheet-identity>.level-seal{grid-column:1;grid-row:2;justify-self:center;width:68px;height:68px}.sheet-quick-stats{grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;margin-top:12px}.sheet-quick-stats strong{font-size:17px}.sheet-quick-stats>div{padding:9px 6px}.sheet-portrait h3{font-size:11px}.sheet-portrait .btn{font-size:10px;padding:7px}.sheet-portrait p{font-size:11px}}
+
+.sheet-hp-control{margin-top:18px;padding:14px;border:1px solid #485443;background:rgba(10,18,13,.55)}
+.sheet-hp-heading{display:flex;align-items:center;gap:8px;color:var(--goldlight);flex-wrap:wrap}
+.sheet-hp-heading span{margin-left:auto;font-size:17px;font-weight:700;color:var(--text)}
+.sheet-hp-actions{display:flex;gap:8px;margin:12px 0}
+.sheet-hp-actions .btn{flex:1;padding:9px 10px}
+.sheet-hp-control .field{max-width:160px}
+@media(max-width:700px){.sheet-hp-control{padding:10px}.sheet-hp-heading span{width:100%;margin-left:0}.sheet-hp-actions{flex-wrap:wrap}.sheet-hp-actions .btn{min-width:95px}}

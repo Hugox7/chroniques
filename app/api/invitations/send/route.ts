@@ -21,8 +21,16 @@ export async function POST(request:NextRequest) {
   const campaignId=payload.campaignId;
   if(!campaignId||!/^[0-9a-f-]{36}$/i.test(campaignId))return json({error:'Campagne invalide.'},400);
   const admin=createClient(url,service,{auth:{persistSession:false,autoRefreshToken:false}});
-  const {data:campaign,error:campaignError}=await admin.from('campaigns').select('id,title,owner_id').eq('id',campaignId).single();
-  if(campaignError||!campaign||campaign.owner_id!==user.id)return json({error:'Accès refusé.'},403);
+  // Vérifier la propriété avec le JWT du MJ, comme le fait la page campagne.
+  // Le client service-role sert uniquement aux lectures administratives nécessaires à l'e-mail.
+  const {data:campaign,error:campaignError}=await userClient.from('campaigns').select('id,title,owner_id,status').eq('id',campaignId).maybeSingle();
+  if(campaignError) {
+    console.error('Invitation: lecture campagne impossible', {code:campaignError.code,message:campaignError.message});
+    return json({error:'Impossible de vérifier les droits sur cette campagne. Vérifiez les migrations et les politiques Supabase.'},500);
+  }
+  if(!campaign)return json({error:'Campagne introuvable ou inaccessible pour ce compte.'},404);
+  if(campaign.owner_id!==user.id)return json({error:'Seul le propriétaire de la campagne peut inviter des joueurs.'},403);
+  if(campaign.status!=='recruiting'&&campaign.status!=='active'&&campaign.status!=='paused')return json({error:'Les invitations sont disponibles à partir du recrutement et avant la clôture.'},409);
   const {data:profile}=await admin.from('profiles').select('username').eq('id',user.id).maybeSingle();
   let recipient='';
   if(payload.companionId) {

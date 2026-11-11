@@ -1,0 +1,30 @@
+{
+  "edition": "2014",
+  "classes": 12,
+  "spells": 319,
+  "classSpellCounts": {
+    "barbarian": 0,
+    "bard": 111,
+    "cleric": 105,
+    "druid": 106,
+    "fighter": 0,
+    "monk": 0,
+    "paladin": 31,
+    "ranger": 37,
+    "rogue": 0,
+    "sorcerer": 120,
+    "warlock": 64,
+    "wizard": 204
+  },
+  "wizardProgressionLevels": 20,
+  "wizardApiSpells": 204,
+  "wizardDerivedSpells": 204,
+  "wizardOnlyInApi": [],
+  "wizardOnlyInDerived": [],
+  "missingSpellIds": [],
+  "limitations": [
+    "Progression vérifiée uniquement pour le magicien : les autres classes ne figurent pas dans checks.",
+    "Les listes des sorts des autres classes sont reconstruites depuis les champs classes des sorts, non vérifiées par leurs endpoints.",
+    "La progression des sous-classes n’est pas encore normalisée."
+  ]
+}

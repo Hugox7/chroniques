@@ -1,0 +1,139 @@
+{
+  "sourceManifest": {
+    "fetched_at": "2026-11-09T19:57:45.262Z",
+    "license": "CC-BY 4.0 - D&D System Reference Document, (c) Wizards of the Coast LLC",
+    "sources": {
+      "open5e": {
+        "url": "https://api.open5e.com",
+        "editions": {
+          "2014": {},
+          "2024": {
+            "creaturetypes": 14,
+            "damagetypes": 13,
+            "languages": 18,
+            "alignments": 9,
+            "conditions": 15,
+            "spellschools": 8,
+            "sizes": 6,
+            "environments": 19,
+            "abilities": 6,
+            "skills": 18
+          }
+        }
+      },
+      "dnd5eapi": {
+        "url": "https://www.dnd5eapi.co",
+        "editions": {
+          "2014": {
+            "endpoints": {},
+            "failed": {}
+          },
+          "2024": {
+            "endpoints": {},
+            "failed": {}
+          }
+        }
+      }
+    }
+  },
+  "sourceCounts": {
+    "dnd5eapi/2014/ability-scores.json": 6,
+    "dnd5eapi/2014/alignments.json": 9,
+    "dnd5eapi/2014/backgrounds.json": 1,
+    "dnd5eapi/2014/classes.json": 12,
+    "dnd5eapi/2014/conditions.json": 15,
+    "dnd5eapi/2014/damage-types.json": 13,
+    "dnd5eapi/2014/equipment-categories.json": 39,
+    "dnd5eapi/2014/equipment.json": 237,
+    "dnd5eapi/2014/feats.json": 1,
+    "dnd5eapi/2014/features.json": 407,
+    "dnd5eapi/2014/languages.json": 16,
+    "dnd5eapi/2014/magic-items.json": 362,
+    "dnd5eapi/2014/magic-schools.json": 8,
+    "dnd5eapi/2014/monsters.json": 334,
+    "dnd5eapi/2014/proficiencies.json": 117,
+    "dnd5eapi/2014/races.json": 9,
+    "dnd5eapi/2014/rules.json": 137,
+    "dnd5eapi/2014/skills.json": 18,
+    "dnd5eapi/2014/spells.json": 319,
+    "dnd5eapi/2014/subclasses.json": 12,
+    "dnd5eapi/2014/subraces.json": 4,
+    "dnd5eapi/2014/traits.json": 38,
+    "dnd5eapi/2014/weapon-properties.json": 11,
+    "dnd5eapi/2024/ability-scores.json": 6,
+    "dnd5eapi/2024/alignments.json": 10,
+    "dnd5eapi/2024/backgrounds.json": 4,
+    "dnd5eapi/2024/classes.json": 12,
+    "dnd5eapi/2024/conditions.json": 15,
+    "dnd5eapi/2024/damage-types.json": 13,
+    "dnd5eapi/2024/equipment-categories.json": 30,
+    "dnd5eapi/2024/equipment.json": 182,
+    "dnd5eapi/2024/feats.json": 17,
+    "dnd5eapi/2024/features.json": 232,
+    "dnd5eapi/2024/languages.json": 19,
+    "dnd5eapi/2024/magic-items.json": 262,
+    "dnd5eapi/2024/magic-schools.json": 8,
+    "dnd5eapi/2024/monsters.json": 341,
+    "dnd5eapi/2024/poisons.json": 14,
+    "dnd5eapi/2024/proficiencies.json": 58,
+    "dnd5eapi/2024/skills.json": 18,
+    "dnd5eapi/2024/species.json": 9,
+    "dnd5eapi/2024/spells.json": 339,
+    "dnd5eapi/2024/subclasses.json": 12,
+    "dnd5eapi/2024/subspecies.json": 24,
+    "dnd5eapi/2024/traits.json": 67,
+    "dnd5eapi/2024/weapon-mastery-properties.json": 8,
+    "dnd5eapi/2024/weapon-properties.json": 10,
+    "manifest.json": null,
+    "open5e/srd-2014/armor.json": 18,
+    "open5e/srd-2014/backgrounds.json": 1,
+    "open5e/srd-2014/classes.json": 12,
+    "open5e/srd-2014/conditions.json": 15,
+    "open5e/srd-2014/feats.json": 1,
+    "open5e/srd-2014/magicitems.json": 237,
+    "open5e/srd-2014/monsters.json": 322,
+    "open5e/srd-2014/planes.json": 8,
+    "open5e/srd-2014/races.json": 9,
+    "open5e/srd-2014/sections.json": 45,
+    "open5e/srd-2014/spelllist.json": 3,
+    "open5e/srd-2014/spells.json": 319,
+    "open5e/srd-2014/weapons.json": 37,
+    "open5e/srd-2024/abilities.json": 6,
+    "open5e/srd-2024/alignments.json": 9,
+    "open5e/srd-2024/armor.json": 13,
+    "open5e/srd-2024/backgrounds.json": 4,
+    "open5e/srd-2024/classes.json": 24,
+    "open5e/srd-2024/conditions.json": 15,
+    "open5e/srd-2024/creatures.json": 331,
+    "open5e/srd-2024/creaturetypes.json": 14,
+    "open5e/srd-2024/damagetypes.json": 13,
+    "open5e/srd-2024/environments.json": 19,
+    "open5e/srd-2024/feats.json": 17,
+    "open5e/srd-2024/itemcategories.json": 2,
+    "open5e/srd-2024/itemrarities.json": 6,
+    "open5e/srd-2024/items.json": 203,
+    "open5e/srd-2024/languages.json": 18,
+    "open5e/srd-2024/magicitems.json": 760,
+    "open5e/srd-2024/rules.json": 56,
+    "open5e/srd-2024/rulesets.json": 11,
+    "open5e/srd-2024/services.json": 30,
+    "open5e/srd-2024/sizes.json": 6,
+    "open5e/srd-2024/skills.json": 18,
+    "open5e/srd-2024/species.json": 9,
+    "open5e/srd-2024/spells.json": 339,
+    "open5e/srd-2024/spellschools.json": 8,
+    "open5e/srd-2024/weaponproperties.json": 17,
+    "open5e/srd-2024/weapons.json": 38,
+    "normalized-spells-2014": 319,
+    "normalized-spells-2024": 339
+  },
+  "normalized": {
+    "2014": 319,
+    "2024": 339
+  },
+  "notes": [
+    "Les sources brutes sont conservées séparément.",
+    "La concordance des noms ne garantit pas la concordance des descriptions.",
+    "Les données restent en anglais ; aucune traduction automatique des règles."
+  ]
+}

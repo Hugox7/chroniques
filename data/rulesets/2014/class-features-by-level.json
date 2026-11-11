@@ -1,0 +1,3477 @@
+{
+  "ruleset": "2014",
+  "source": "dnd5eapi/2014/features.json",
+  "scope": "class and subclass feature index; not authoritative /levels progression",
+  "classes": {
+    "barbarian": [
+      {
+        "level": 1,
+        "proficiencyBonus": 2,
+        "features": [
+          {
+            "id": "barbarian-unarmored-defense",
+            "name": "Unarmored Defense",
+            "subclass": null
+          },
+          {
+            "id": "rage",
+            "name": "Rage",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "proficiencyBonus": 2,
+        "features": [
+          {
+            "id": "danger-sense",
+            "name": "Danger Sense",
+            "subclass": null
+          },
+          {
+            "id": "reckless-attack",
+            "name": "Reckless Attack",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "proficiencyBonus": 2,
+        "features": [
+          {
+            "id": "frenzy",
+            "name": "Frenzy",
+            "subclass": "berserker"
+          },
+          {
+            "id": "primal-path",
+            "name": "Primal Path",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "proficiencyBonus": 2,
+        "features": [
+          {
+            "id": "barbarian-ability-score-improvement-1",
+            "name": "Ability Score Improvement",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "proficiencyBonus": 3,
+        "features": [
+          {
+            "id": "barbarian-extra-attack",
+            "name": "Extra Attack",
+            "subclass": null
+          },
+          {
+            "id": "fast-movement",
+            "name": "Fast Movement",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 6,
+        "proficiencyBonus": 3,
+        "features": [
+          {
+            "id": "mindless-rage",
+            "name": "Mindless Rage",
+            "subclass": "berserker"
+          },
+          {
+            "id": "primal-path-improvement-1",
+            "name": "Path feature",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 7,
+        "proficiencyBonus": 3,
+        "features": [
+          {
+            "id": "feral-instinct",
+            "name": "Feral Instinct",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 8,
+        "proficiencyBonus": 3,
+        "features": [
+          {
+            "id": "barbarian-ability-score-improvement-2",
+            "name": "Ability Score Improvement",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 9,
+        "proficiencyBonus": 4,
+        "features": [
+          {
+            "id": "brutal-critical-1-die",
+            "name": "Brutal Critical (1 die)",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 10,
+        "proficiencyBonus": 4,
+        "features": [
+          {
+            "id": "intimidating-presence",
+            "name": "Intimidating Presence",
+            "subclass": "berserker"
+          },
+          {
+            "id": "primal-path-improvement-2",
+            "name": "Path feature",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 11,
+        "proficiencyBonus": 4,
+        "features": [
+          {
+            "id": "relentless-rage",
+            "name": "Relentless Rage",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 12,
+        "proficiencyBonus": 4,
+        "features": [
+          {
+            "id": "barbarian-ability-score-improvement-3",
+            "name": "Ability Score Improvement",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 13,
+        "proficiencyBonus": 5,
+        "features": [
+          {
+            "id": "brutal-critical-2-dice",
+            "name": "Brutal Critical (2 dice)",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 14,
+        "proficiencyBonus": 5,
+        "features": [
+          {
+            "id": "primal-path-improvement-3",
+            "name": "Path feature",
+            "subclass": null
+          },
+          {
+            "id": "retaliation",
+            "name": "Retaliation",
+            "subclass": "berserker"
+          }
+        ]
+      },
+      {
+        "level": 15,
+        "proficiencyBonus": 5,
+        "features": [
+          {
+            "id": "persistent-rage",
+            "name": "Persistent Rage",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 16,
+        "proficiencyBonus": 5,
+        "features": [
+          {
+            "id": "barbarian-ability-score-improvement-4",
+            "name": "Ability Score Improvement",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 17,
+        "proficiencyBonus": 6,
+        "features": [
+          {
+            "id": "brutal-critical-3-dice",
+            "name": "Brutal Critical (3 dice)",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 18,
+        "proficiencyBonus": 6,
+        "features": [
+          {
+            "id": "indomitable-might",
+            "name": "Indomitable Might",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 19,
+        "proficiencyBonus": 6,
+        "features": [
+          {
+            "id": "barbarian-ability-score-improvement-5",
+            "name": "Ability Score Improvement",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 20,
+        "proficiencyBonus": 6,
+        "features": [
+          {
+            "id": "primal-champion",
+            "name": "Primal Champion",
+            "subclass": null
+          }
+        ]
+      }
+    ],
+    "bard": [
+      {
+        "level": 1,
+        "proficiencyBonus": 2,
+        "features": [
+          {
+            "id": "bardic-inspiration-d6",
+            "name": "Bardic Inspiration (d6)",
+            "subclass": null
+          },
+          {
+            "id": "spellcasting-bard",
+            "name": "Spellcasting: Bard",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "proficiencyBonus": 2,
+        "features": [
+          {
+            "id": "jack-of-all-trades",
+            "name": "Jack of All Trades",
+            "subclass": null
+          },
+          {
+            "id": "song-of-rest-d6",
+            "name": "Song of Rest (d6)",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "proficiencyBonus": 2,
+        "features": [
+          {
+            "id": "bard-college",
+            "name": "Bard College",
+            "subclass": null
+          },
+          {
+            "id": "bard-expertise-1",
+            "name": "Expertise",
+            "subclass": null
+          },
+          {
+            "id": "bonus-proficiencies",
+            "name": "Bonus Proficiencies",
+            "subclass": "lore"
+          },
+          {
+            "id": "cutting-words",
+            "name": "Cutting Words",
+            "subclass": "lore"
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "proficiencyBonus": 2,
+        "features": [
+          {
+            "id": "bard-ability-score-improvement-1",
+            "name": "Ability Score Improvement",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "proficiencyBonus": 3,
+        "features": [
+          {
+            "id": "bardic-inspiration-d8",
+            "name": "Bardic Inspiration (d8)",
+            "subclass": null
+          },
+          {
+            "id": "font-of-inspiration",
+            "name": "Font of Inspiration",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 6,
+        "proficiencyBonus": 3,
+        "features": [
+          {
+            "id": "additional-magical-secrets",
+            "name": "Additional Magical Secrets",
+            "subclass": "lore"
+          },
+          {
+            "id": "bard-college-improvement-1",
+            "name": "Bard College feature",
+            "subclass": null
+          },
+          {
+            "id": "countercharm",
+            "name": "Countercharm",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 7,
+        "proficiencyBonus": 3,
+        "features": []
+      },
+      {
+        "level": 8,
+        "proficiencyBonus": 3,
+        "features": [
+          {
+            "id": "bard-ability-score-improvement-2",
+            "name": "Ability Score Improvement",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 9,
+        "proficiencyBonus": 4,
+        "features": [
+          {
+            "id": "song-of-rest-d8",
+            "name": "Song of Rest (d8)",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 10,
+        "proficiencyBonus": 4,
+        "features": [
+          {
+            "id": "bard-expertise-2",
+            "name": "Expertise",
+            "subclass": null
+          },
+          {
+            "id": "bardic-inspiration-d10",
+            "name": "Bardic Inspiration (d10)",
+            "subclass": null
+          },
+          {
+            "id": "magical-secrets-1",
+            "name": "Magical Secrets",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 11,
+        "proficiencyBonus": 4,
+        "features": []
+      },
+      {
+        "level": 12,
+        "proficiencyBonus": 4,
+        "features": [
+          {
+            "id": "bard-ability-score-improvement-3",
+            "name": "Ability Score Improvement",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 13,
+        "proficiencyBonus": 5,
+        "features": [
+          {
+            "id": "song-of-rest-d10",
+            "name": "Song of Rest (d10)",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 14,
+        "proficiencyBonus": 5,
+        "features": [
+          {
+            "id": "bard-college-improvement-2",
+            "name": "Bard College feature",
+            "subclass": null
+          },
+          {
+            "id": "magical-secrets-2",
+            "name": "Magical Secrets",
+            "subclass": null
+          },
+          {
+            "id": "peerless-skill",
+            "name": "Peerless Skill",
+            "subclass": "lore"
+          }
+        ]
+      },
+      {
+        "level": 15,
+        "proficiencyBonus": 5,
+        "features": [
+          {
+            "id": "bardic-inspiration-d12",
+            "name": "Bardic Inspiration (d12)",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 16,
+        "proficiencyBonus": 5,
+        "features": [
+          {
+            "id": "bard-ability-score-improvement-4",
+            "name": "Ability Score Improvement",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 17,
+        "proficiencyBonus": 6,
+        "features": [
+          {
+            "id": "song-of-rest-d12",
+            "name": "Song of Rest (d12)",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 18,
+        "proficiencyBonus": 6,
+        "features": [
+          {
+            "id": "magical-secrets-3",
+            "name": "Magical Secrets",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 19,
+        "proficiencyBonus": 6,
+        "features": [
+          {
+            "id": "bard-ability-score-improvement-5",
+            "name": "Ability Score Improvement",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 20,
+        "proficiencyBonus": 6,
+        "features": [
+          {
+            "id": "superior-inspiration",
+            "name": "Superior Inspiration",
+            "subclass": null
+          }
+        ]
+      }
+    ],
+    "cleric": [
+      {
+        "level": 1,
+        "proficiencyBonus": 2,
+        "features": [
+          {
+            "id": "bonus-proficiency",
+            "name": "Bonus Proficiency",
+            "subclass": "life"
+          },
+          {
+            "id": "disciple-of-life",
+            "name": "Disciple of Life",
+            "subclass": "life"
+          },
+          {
+            "id": "divine-domain",
+            "name": "Divine Domain",
+            "subclass": null
+          },
+          {
+            "id": "domain-spells-1",
+            "name": "Domain Spells",
+            "subclass": null
+          },
+          {
+            "id": "spellcasting-cleric",
+            "name": "Spellcasting: Cleric",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "proficiencyBonus": 2,
+        "features": [
+          {
+            "id": "channel-divinity-1-rest",
+            "name": "Channel Divinity (1/rest)",
+            "subclass": null
+          },
+          {
+            "id": "channel-divinity-preserve-life",
+            "name": "Channel Divinity: Preserve Life",
+            "subclass": "life"
+          },
+          {
+            "id": "channel-divinity-turn-undead",
+            "name": "Channel Divinity: Turn Undead",
+            "subclass": null
+          },
+          {
+            "id": "divine-domain-improvement-1",
+            "name": "Divine Domain feature",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "proficiencyBonus": 2,
+        "features": [
+          {
+            "id": "domain-spells-2",
+            "name": "Domain Spells",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "proficiencyBonus": 2,
+        "features": [
+          {
+            "id": "cleric-ability-score-improvement-1",
+            "name": "Ability Score Improvement",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "proficiencyBonus": 3,
+        "features": [
+          {
+            "id": "destroy-undead-cr-1-2-or-below",
+            "name": "Destroy Undead (CR 1/2 or below)",
+            "subclass": null
+          },
+          {
+            "id": "domain-spells-3",
+            "name": "Domain Spells",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 6,
+        "proficiencyBonus": 3,
+        "features": [
+          {
+            "id": "blessed-healer",
+            "name": "Blessed Healer",
+            "subclass": "life"
+          },
+          {
+            "id": "channel-divinity-2-rest",
+            "name": "Channel Divinity (2/rest)",
+            "subclass": null
+          },
+          {
+            "id": "divine-domain-improvement-2",
+            "name": "Divine Domain feature",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 7,
+        "proficiencyBonus": 3,
+        "features": [
+          {
+            "id": "domain-spells-4",
+            "name": "Domain Spells",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 8,
+        "proficiencyBonus": 3,
+        "features": [
+          {
+            "id": "cleric-ability-score-improvement-2",
+            "name": "Ability Score Improvement",
+            "subclass": null
+          },
+          {
+            "id": "destroy-undead-cr-1-or-below",
+            "name": "Destroy Undead (CR 1 or below)",
+            "subclass": null
+          },
+          {
+            "id": "divine-domain-improvement-3",
+            "name": "Divine Domain feature",
+            "subclass": null
+          },
+          {
+            "id": "divine-strike",
+            "name": "Divine Strike",
+            "subclass": "life"
+          }
+        ]
+      },
+      {
+        "level": 9,
+        "proficiencyBonus": 4,
+        "features": [
+          {
+            "id": "domain-spells-5",
+            "name": "Domain Spells",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 10,
+        "proficiencyBonus": 4,
+        "features": [
+          {
+            "id": "divine-intervention",
+            "name": "Divine Intervention",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 11,
+        "proficiencyBonus": 4,
+        "features": [
+          {
+            "id": "destroy-undead-cr-2-or-below",
+            "name": "Destroy Undead (CR 2 or below)",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 12,
+        "proficiencyBonus": 4,
+        "features": [
+          {
+            "id": "cleric-ability-score-improvement-3",
+            "name": "Ability Score Improvement",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 13,
+        "proficiencyBonus": 5,
+        "features": []
+      },
+      {
+        "level": 14,
+        "proficiencyBonus": 5,
+        "features": [
+          {
+            "id": "destroy-undead-cr-3-or-below",
+            "name": "Destroy Undead (CR 3 or below)",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 15,
+        "proficiencyBonus": 5,
+        "features": []
+      },
+      {
+        "level": 16,
+        "proficiencyBonus": 5,
+        "features": [
+          {
+            "id": "cleric-ability-score-improvement-4",
+            "name": "Ability Score Improvement",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 17,
+        "proficiencyBonus": 6,
+        "features": [
+          {
+            "id": "destroy-undead-cr-4-or-below",
+            "name": "Destroy Undead (CR 4 or below)",
+            "subclass": null
+          },
+          {
+            "id": "divine-domain-improvement-4",
+            "name": "Divine Domain feature",
+            "subclass": null
+          },
+          {
+            "id": "supreme-healing",
+            "name": "Supreme Healing",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 18,
+        "proficiencyBonus": 6,
+        "features": [
+          {
+            "id": "channel-divinity-3-rest",
+            "name": "Channel Divinity (3/rest)",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 19,
+        "proficiencyBonus": 6,
+        "features": [
+          {
+            "id": "cleric-ability-score-improvement-5",
+            "name": "Ability Score Improvement",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 20,
+        "proficiencyBonus": 6,
+        "features": [
+          {
+            "id": "divine-intervention-improvement",
+            "name": "Divine Intervention Improvement",
+            "subclass": null
+          }
+        ]
+      }
+    ],
+    "druid": [
+      {
+        "level": 1,
+        "proficiencyBonus": 2,
+        "features": [
+          {
+            "id": "druidic",
+            "name": "Druidic",
+            "subclass": null
+          },
+          {
+            "id": "spellcasting-druid",
+            "name": "Spellcasting: Druid",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "proficiencyBonus": 2,
+        "features": [
+          {
+            "id": "bonus-cantrip",
+            "name": "Bonus Cantrip",
+            "subclass": "land"
+          },
+          {
+            "id": "circle-of-the-land",
+            "name": "Circle of the Land",
+            "subclass": "land"
+          },
+          {
+            "id": "circle-of-the-land-arctic",
+            "name": "Circle of the Land: Arctic",
+            "subclass": "land"
+          },
+          {
+            "id": "circle-of-the-land-coast",
+            "name": "Circle of the Land: Coast",
+            "subclass": "land"
+          },
+          {
+            "id": "circle-of-the-land-desert",
+            "name": "Circle of the Land: Desert",
+            "subclass": "land"
+          },
+          {
+            "id": "circle-of-the-land-forest",
+            "name": "Circle of the Land: Forest",
+            "subclass": "land"
+          },
+          {
+            "id": "circle-of-the-land-grassland",
+            "name": "Circle of the Land: Grassland",
+            "subclass": "land"
+          },
+          {
+            "id": "circle-of-the-land-mountain",
+            "name": "Circle of the Land: Mountain",
+            "subclass": "land"
+          },
+          {
+            "id": "circle-of-the-land-swamp",
+            "name": "Circle of the Land: Swamp",
+            "subclass": "land"
+          },
+          {
+            "id": "druid-circle",
+            "name": "Druid Circle",
+            "subclass": null
+          },
+          {
+            "id": "natural-recovery",
+            "name": "Natural Recovery",
+            "subclass": "land"
+          },
+          {
+            "id": "wild-shape-cr-1-4-or-below-no-flying-or-swim-speed",
+            "name": "Wild Shape (CR 1/4 or below, no flying or swim speed)",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "proficiencyBonus": 2,
+        "features": [
+          {
+            "id": "circle-spells-1",
+            "name": "Circle Spells",
+            "subclass": "land"
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "proficiencyBonus": 2,
+        "features": [
+          {
+            "id": "druid-ability-score-improvement-1",
+            "name": "Ability Score Improvement",
+            "subclass": null
+          },
+          {
+            "id": "wild-shape-cr-1-2-or-below-no-flying-speed",
+            "name": "Wild Shape (CR 1/2 or below, no flying speed)",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "proficiencyBonus": 3,
+        "features": [
+          {
+            "id": "circle-spells-2",
+            "name": "Circle Spells",
+            "subclass": "land"
+          }
+        ]
+      },
+      {
+        "level": 6,
+        "proficiencyBonus": 3,
+        "features": [
+          {
+            "id": "druid-circle-improvement-1",
+            "name": "Druid Circle feature",
+            "subclass": null
+          },
+          {
+            "id": "druid-lands-stride",
+            "name": "Land's Stride",
+            "subclass": "land"
+          }
+        ]
+      },
+      {
+        "level": 7,
+        "proficiencyBonus": 3,
+        "features": [
+          {
+            "id": "circle-spells-3",
+            "name": "Circle Spells",
+            "subclass": "land"
+          }
+        ]
+      },
+      {
+        "level": 8,
+        "proficiencyBonus": 3,
+        "features": [
+          {
+            "id": "druid-ability-score-improvement-2",
+            "name": "Ability Score Improvement",
+            "subclass": null
+          },
+          {
+            "id": "wild-shape-cr-1-or-below",
+            "name": "Wild Shape (CR 1 or below)",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 9,
+        "proficiencyBonus": 4,
+        "features": [
+          {
+            "id": "circle-spells-4",
+            "name": "Circle Spells",
+            "subclass": "land"
+          }
+        ]
+      },
+      {
+        "level": 10,
+        "proficiencyBonus": 4,
+        "features": [
+          {
+            "id": "druid-circle-improvement-2",
+            "name": "Druid Circle feature",
+            "subclass": null
+          },
+          {
+            "id": "natures-ward",
+            "name": "Nature's Ward",
+            "subclass": "land"
+          }
+        ]
+      },
+      {
+        "level": 11,
+        "proficiencyBonus": 4,
+        "features": []
+      },
+      {
+        "level": 12,
+        "proficiencyBonus": 4,
+        "features": [
+          {
+            "id": "druid-ability-score-improvement-3",
+            "name": "Ability Score Improvement",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 13,
+        "proficiencyBonus": 5,
+        "features": []
+      },
+      {
+        "level": 14,
+        "proficiencyBonus": 5,
+        "features": [
+          {
+            "id": "druid-circle-improvement-3",
+            "name": "Druid Circle feature",
+            "subclass": null
+          },
+          {
+            "id": "natures-sanctuary",
+            "name": "Nature's Sanctuary",
+            "subclass": "land"
+          }
+        ]
+      },
+      {
+        "level": 15,
+        "proficiencyBonus": 5,
+        "features": []
+      },
+      {
+        "level": 16,
+        "proficiencyBonus": 5,
+        "features": [
+          {
+            "id": "druid-ability-score-improvement-4",
+            "name": "Ability Score Improvement",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 17,
+        "proficiencyBonus": 6,
+        "features": []
+      },
+      {
+        "level": 18,
+        "proficiencyBonus": 6,
+        "features": [
+          {
+            "id": "beast-spells",
+            "name": "Beast Spells",
+            "subclass": null
+          },
+          {
+            "id": "druid-timeless-body",
+            "name": "Timeless Body",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 19,
+        "proficiencyBonus": 6,
+        "features": [
+          {
+            "id": "druid-ability-score-improvement-5",
+            "name": "Ability Score Improvement",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 20,
+        "proficiencyBonus": 6,
+        "features": [
+          {
+            "id": "archdruid",
+            "name": "Archdruid",
+            "subclass": null
+          }
+        ]
+      }
+    ],
+    "fighter": [
+      {
+        "level": 1,
+        "proficiencyBonus": 2,
+        "features": [
+          {
+            "id": "fighter-fighting-style",
+            "name": "Fighting Style",
+            "subclass": null
+          },
+          {
+            "id": "fighter-fighting-style-archery",
+            "name": "Fighting Style: Archery",
+            "subclass": null
+          },
+          {
+            "id": "fighter-fighting-style-defense",
+            "name": "Fighting Style: Defense",
+            "subclass": null
+          },
+          {
+            "id": "fighter-fighting-style-dueling",
+            "name": "Fighting Style: Dueling",
+            "subclass": null
+          },
+          {
+            "id": "fighter-fighting-style-great-weapon-fighting",
+            "name": "Fighting Style: Great Weapon Fighting",
+            "subclass": null
+          },
+          {
+            "id": "fighter-fighting-style-protection",
+            "name": "Fighting Style: Protection",
+            "subclass": null
+          },
+          {
+            "id": "fighter-fighting-style-two-weapon-fighting",
+            "name": "Fighting Style: Two-Weapon Fighting",
+            "subclass": null
+          },
+          {
+            "id": "second-wind",
+            "name": "Second Wind",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "proficiencyBonus": 2,
+        "features": [
+          {
+            "id": "action-surge-1-use",
+            "name": "Action Surge (1 use)",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "proficiencyBonus": 2,
+        "features": [
+          {
+            "id": "improved-critical",
+            "name": "Improved Critical",
+            "subclass": "champion"
+          },
+          {
+            "id": "martial-archetype",
+            "name": "Martial Archetype",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "proficiencyBonus": 2,
+        "features": [
+          {
+            "id": "fighter-ability-score-improvement-1",
+            "name": "Ability Score Improvement",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "proficiencyBonus": 3,
+        "features": [
+          {
+            "id": "extra-attack-1",
+            "name": "Extra Attack",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 6,
+        "proficiencyBonus": 3,
+        "features": [
+          {
+            "id": "fighter-ability-score-improvement-2",
+            "name": "Ability Score Improvement",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 7,
+        "proficiencyBonus": 3,
+        "features": [
+          {
+            "id": "martial-archetype-improvement-1",
+            "name": "Martial Archetype feature",
+            "subclass": null
+          },
+          {
+            "id": "remarkable-athlete",
+            "name": "Remarkable Athlete",
+            "subclass": "champion"
+          }
+        ]
+      },
+      {
+        "level": 8,
+        "proficiencyBonus": 3,
+        "features": [
+          {
+            "id": "fighter-ability-score-improvement-3",
+            "name": "Ability Score Improvement",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 9,
+        "proficiencyBonus": 4,
+        "features": [
+          {
+            "id": "indomitable-1-use",
+            "name": "Indomitable (1 use)",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 10,
+        "proficiencyBonus": 4,
+        "features": [
+          {
+            "id": "additional-fighting-style",
+            "name": "Additional Fighting Style",
+            "subclass": "champion"
+          },
+          {
+            "id": "martial-archetype-improvement-2",
+            "name": "Martial Archetype feature",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 11,
+        "proficiencyBonus": 4,
+        "features": [
+          {
+            "id": "extra-attack-2",
+            "name": "Extra Attack (2)",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 12,
+        "proficiencyBonus": 4,
+        "features": [
+          {
+            "id": "fighter-ability-score-improvement-4",
+            "name": "Ability Score Improvement",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 13,
+        "proficiencyBonus": 5,
+        "features": [
+          {
+            "id": "indomitable-2-uses",
+            "name": "Indomitable (2 uses)",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 14,
+        "proficiencyBonus": 5,
+        "features": [
+          {
+            "id": "fighter-ability-score-improvement-5",
+            "name": "Ability Score Improvement",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 15,
+        "proficiencyBonus": 5,
+        "features": [
+          {
+            "id": "martial-archetype-improvement-3",
+            "name": "Martial Archetype feature",
+            "subclass": null
+          },
+          {
+            "id": "superior-critical",
+            "name": "Superior Critical",
+            "subclass": "champion"
+          }
+        ]
+      },
+      {
+        "level": 16,
+        "proficiencyBonus": 5,
+        "features": [
+          {
+            "id": "fighter-ability-score-improvement-6",
+            "name": "Ability Score Improvement",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 17,
+        "proficiencyBonus": 6,
+        "features": [
+          {
+            "id": "action-surge-2-uses",
+            "name": "Action Surge (2 uses)",
+            "subclass": null
+          },
+          {
+            "id": "indomitable-3-uses",
+            "name": "Indomitable (3 uses)",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 18,
+        "proficiencyBonus": 6,
+        "features": [
+          {
+            "id": "martial-archetype-improvement-4",
+            "name": "Martial Archetype feature",
+            "subclass": null
+          },
+          {
+            "id": "survivor",
+            "name": "Survivor",
+            "subclass": "champion"
+          }
+        ]
+      },
+      {
+        "level": 19,
+        "proficiencyBonus": 6,
+        "features": [
+          {
+            "id": "fighter-ability-score-improvement-7",
+            "name": "Ability Score Improvement",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 20,
+        "proficiencyBonus": 6,
+        "features": [
+          {
+            "id": "extra-attack-3",
+            "name": "Extra Attack (3)",
+            "subclass": null
+          }
+        ]
+      }
+    ],
+    "monk": [
+      {
+        "level": 1,
+        "proficiencyBonus": 2,
+        "features": [
+          {
+            "id": "martial-arts",
+            "name": "Martial Arts",
+            "subclass": null
+          },
+          {
+            "id": "monk-unarmored-defense",
+            "name": "Unarmored Defense",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "proficiencyBonus": 2,
+        "features": [
+          {
+            "id": "flurry-of-blows",
+            "name": "Flurry of Blows",
+            "subclass": null
+          },
+          {
+            "id": "ki",
+            "name": "Ki",
+            "subclass": null
+          },
+          {
+            "id": "patient-defense",
+            "name": "Patient Defense",
+            "subclass": null
+          },
+          {
+            "id": "step-of-the-wind",
+            "name": "Step of the Wind",
+            "subclass": null
+          },
+          {
+            "id": "unarmored-movement-1",
+            "name": "Unarmored Movement",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "proficiencyBonus": 2,
+        "features": [
+          {
+            "id": "deflect-missiles",
+            "name": "Deflect Missiles",
+            "subclass": null
+          },
+          {
+            "id": "monastic-tradition",
+            "name": "Monastic Tradition",
+            "subclass": null
+          },
+          {
+            "id": "open-hand-technique",
+            "name": "Open Hand Technique",
+            "subclass": "open-hand"
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "proficiencyBonus": 2,
+        "features": [
+          {
+            "id": "monk-ability-score-improvement-1",
+            "name": "Ability Score Improvement",
+            "subclass": null
+          },
+          {
+            "id": "slow-fall",
+            "name": "Slow Fall",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "proficiencyBonus": 3,
+        "features": [
+          {
+            "id": "monk-extra-attack",
+            "name": "Extra Attack",
+            "subclass": null
+          },
+          {
+            "id": "stunning-strike",
+            "name": "Stunning Strike",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 6,
+        "proficiencyBonus": 3,
+        "features": [
+          {
+            "id": "ki-empowered-strikes",
+            "name": "Ki Empowered Strikes",
+            "subclass": null
+          },
+          {
+            "id": "monastic-tradition-improvement-1",
+            "name": "Monastic Tradition feature",
+            "subclass": null
+          },
+          {
+            "id": "wholeness-of-body",
+            "name": "Wholeness of Body",
+            "subclass": "open-hand"
+          }
+        ]
+      },
+      {
+        "level": 7,
+        "proficiencyBonus": 3,
+        "features": [
+          {
+            "id": "monk-evasion",
+            "name": "Evasion",
+            "subclass": null
+          },
+          {
+            "id": "stillness-of-mind",
+            "name": "Stillness of Mind",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 8,
+        "proficiencyBonus": 3,
+        "features": [
+          {
+            "id": "monk-ability-score-improvement-2",
+            "name": "Ability Score Improvement",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 9,
+        "proficiencyBonus": 4,
+        "features": [
+          {
+            "id": "unarmored-movement-2",
+            "name": "Unarmored Movement",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 10,
+        "proficiencyBonus": 4,
+        "features": [
+          {
+            "id": "purity-of-body",
+            "name": "Purity of Body",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 11,
+        "proficiencyBonus": 4,
+        "features": [
+          {
+            "id": "monastic-tradition-improvement-2",
+            "name": "Monastic Tradition feature",
+            "subclass": null
+          },
+          {
+            "id": "tranquility",
+            "name": "Tranquility",
+            "subclass": "open-hand"
+          }
+        ]
+      },
+      {
+        "level": 12,
+        "proficiencyBonus": 4,
+        "features": [
+          {
+            "id": "monk-ability-score-improvement-3",
+            "name": "Ability Score Improvement",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 13,
+        "proficiencyBonus": 5,
+        "features": [
+          {
+            "id": "tongue-of-the-sun-and-moon",
+            "name": "Tongue of the Sun and Moon",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 14,
+        "proficiencyBonus": 5,
+        "features": [
+          {
+            "id": "diamond-soul",
+            "name": "Diamond Soul",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 15,
+        "proficiencyBonus": 5,
+        "features": [
+          {
+            "id": "monk-timeless-body",
+            "name": "Timeless Body",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 16,
+        "proficiencyBonus": 5,
+        "features": [
+          {
+            "id": "monk-ability-score-improvement-4",
+            "name": "Ability Score Improvement",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 17,
+        "proficiencyBonus": 6,
+        "features": [
+          {
+            "id": "monastic-tradition-improvement-3",
+            "name": "Monastic Tradition feature",
+            "subclass": null
+          },
+          {
+            "id": "quivering-palm",
+            "name": "Quivering Palm",
+            "subclass": "open-hand"
+          }
+        ]
+      },
+      {
+        "level": 18,
+        "proficiencyBonus": 6,
+        "features": [
+          {
+            "id": "empty-body",
+            "name": "Empty Body",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 19,
+        "proficiencyBonus": 6,
+        "features": [
+          {
+            "id": "monk-ability-score-improvement-5",
+            "name": "Ability Score Improvement",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 20,
+        "proficiencyBonus": 6,
+        "features": [
+          {
+            "id": "perfect-self",
+            "name": "Perfect Self",
+            "subclass": null
+          }
+        ]
+      }
+    ],
+    "paladin": [
+      {
+        "level": 1,
+        "proficiencyBonus": 2,
+        "features": [
+          {
+            "id": "divine-sense",
+            "name": "Divine Sense",
+            "subclass": null
+          },
+          {
+            "id": "lay-on-hands",
+            "name": "Lay on Hands",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "proficiencyBonus": 2,
+        "features": [
+          {
+            "id": "divine-smite",
+            "name": "Divine Smite",
+            "subclass": null
+          },
+          {
+            "id": "fighting-style-defense",
+            "name": "Fighting Style: Defense",
+            "subclass": null
+          },
+          {
+            "id": "fighting-style-dueling",
+            "name": "Fighting Style: Dueling",
+            "subclass": null
+          },
+          {
+            "id": "fighting-style-great-weapon-fighting",
+            "name": "Fighting Style: Great Weapon Fighting",
+            "subclass": null
+          },
+          {
+            "id": "fighting-style-protection",
+            "name": "Fighting Style: Protection",
+            "subclass": null
+          },
+          {
+            "id": "paladin-fighting-style",
+            "name": "Fighting Style",
+            "subclass": null
+          },
+          {
+            "id": "spellcasting-paladin",
+            "name": "Spellcasting: Paladin",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "proficiencyBonus": 2,
+        "features": [
+          {
+            "id": "channel-divinity",
+            "name": "Channel Divinity",
+            "subclass": null
+          },
+          {
+            "id": "channel-divinity-sacred-weapon",
+            "name": "Channel Divinity: Sacred Weapon",
+            "subclass": "devotion"
+          },
+          {
+            "id": "channel-divinity-turn-the-unholy",
+            "name": "Channel Divinity: Turn the Unholy",
+            "subclass": "devotion"
+          },
+          {
+            "id": "divine-health",
+            "name": "Divine Health",
+            "subclass": null
+          },
+          {
+            "id": "oath-spells",
+            "name": "Oath Spells",
+            "subclass": null
+          },
+          {
+            "id": "sacred-oath",
+            "name": "Sacred Oath",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "proficiencyBonus": 2,
+        "features": [
+          {
+            "id": "paladin-ability-score-improvement-1",
+            "name": "Ability Score Improvement",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "proficiencyBonus": 3,
+        "features": [
+          {
+            "id": "paladin-extra-attack",
+            "name": "Extra Attack",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 6,
+        "proficiencyBonus": 3,
+        "features": [
+          {
+            "id": "aura-of-protection",
+            "name": "Aura of Protection",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 7,
+        "proficiencyBonus": 3,
+        "features": [
+          {
+            "id": "aura-of-devotion",
+            "name": "Aura of Devotion",
+            "subclass": "devotion"
+          },
+          {
+            "id": "sacred-oath-improvement-1",
+            "name": "Sacred Oath feature",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 8,
+        "proficiencyBonus": 3,
+        "features": [
+          {
+            "id": "paladin-ability-score-improvement-2",
+            "name": "Ability Score Improvement",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 9,
+        "proficiencyBonus": 4,
+        "features": []
+      },
+      {
+        "level": 10,
+        "proficiencyBonus": 4,
+        "features": [
+          {
+            "id": "aura-of-courage",
+            "name": "Aura of Courage",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 11,
+        "proficiencyBonus": 4,
+        "features": [
+          {
+            "id": "improved-divine-smite",
+            "name": "Improved Divine Smite",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 12,
+        "proficiencyBonus": 4,
+        "features": [
+          {
+            "id": "paladin-ability-score-improvement-3",
+            "name": "Ability Score Improvement",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 13,
+        "proficiencyBonus": 5,
+        "features": []
+      },
+      {
+        "level": 14,
+        "proficiencyBonus": 5,
+        "features": [
+          {
+            "id": "cleansing-touch",
+            "name": "Cleansing Touch",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 15,
+        "proficiencyBonus": 5,
+        "features": [
+          {
+            "id": "purity-of-spirit",
+            "name": "Purity of Spirit",
+            "subclass": "devotion"
+          },
+          {
+            "id": "sacred-oath-improvement-2",
+            "name": "Sacred Oath feature",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 16,
+        "proficiencyBonus": 5,
+        "features": [
+          {
+            "id": "paladin-ability-score-improvement-4",
+            "name": "Ability Score Improvement",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 17,
+        "proficiencyBonus": 6,
+        "features": []
+      },
+      {
+        "level": 18,
+        "proficiencyBonus": 6,
+        "features": [
+          {
+            "id": "aura-improvements",
+            "name": "Aura improvements",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 19,
+        "proficiencyBonus": 6,
+        "features": [
+          {
+            "id": "paladin-ability-score-improvement-5",
+            "name": "Ability Score Improvement",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 20,
+        "proficiencyBonus": 6,
+        "features": [
+          {
+            "id": "holy-nimbus",
+            "name": "Holy Nimbus",
+            "subclass": "devotion"
+          },
+          {
+            "id": "sacred-oath-improvement-3",
+            "name": "Sacred Oath feature",
+            "subclass": null
+          }
+        ]
+      }
+    ],
+    "ranger": [
+      {
+        "level": 1,
+        "proficiencyBonus": 2,
+        "features": [
+          {
+            "id": "favored-enemy-1-type",
+            "name": "Favored Enemy (1 type)",
+            "subclass": null
+          },
+          {
+            "id": "natural-explorer-1-terrain-type",
+            "name": "Natural Explorer (1 terrain type)",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "proficiencyBonus": 2,
+        "features": [
+          {
+            "id": "ranger-fighting-style",
+            "name": "Fighting Style",
+            "subclass": null
+          },
+          {
+            "id": "ranger-fighting-style-archery",
+            "name": "Fighting Style: Archery",
+            "subclass": null
+          },
+          {
+            "id": "ranger-fighting-style-defense",
+            "name": "Fighting Style: Defense",
+            "subclass": null
+          },
+          {
+            "id": "ranger-fighting-style-dueling",
+            "name": "Fighting Style: Dueling",
+            "subclass": null
+          },
+          {
+            "id": "ranger-fighting-style-two-weapon-fighting",
+            "name": "Fighting Style: Two-Weapon Fighting",
+            "subclass": null
+          },
+          {
+            "id": "spellcasting-ranger",
+            "name": "Spellcasting: Ranger",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "proficiencyBonus": 2,
+        "features": [
+          {
+            "id": "hunters-prey",
+            "name": "Hunter's Prey",
+            "subclass": "hunter"
+          },
+          {
+            "id": "hunters-prey-colossus-slayer",
+            "name": "Hunter's Prey: Colossus Slayer",
+            "subclass": "hunter"
+          },
+          {
+            "id": "hunters-prey-giant-killer",
+            "name": "Hunter's Prey: Giant Killer",
+            "subclass": "hunter"
+          },
+          {
+            "id": "hunters-prey-horde-breaker",
+            "name": "Hunter's Prey: Horde Breaker",
+            "subclass": "hunter"
+          },
+          {
+            "id": "primeval-awareness",
+            "name": "Primeval Awareness",
+            "subclass": null
+          },
+          {
+            "id": "ranger-archetype",
+            "name": "Ranger Archetype",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "proficiencyBonus": 2,
+        "features": [
+          {
+            "id": "ranger-ability-score-improvement-1",
+            "name": "Ability Score Improvement",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "proficiencyBonus": 3,
+        "features": [
+          {
+            "id": "ranger-extra-attack",
+            "name": "Extra Attack",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 6,
+        "proficiencyBonus": 3,
+        "features": [
+          {
+            "id": "favored-enemy-2-types",
+            "name": "Favored Enemy (2 types)",
+            "subclass": null
+          },
+          {
+            "id": "natural-explorer-2-terrain-types",
+            "name": "Natural Explorer (2 terrain types)",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 7,
+        "proficiencyBonus": 3,
+        "features": [
+          {
+            "id": "defensive-tactics",
+            "name": "Defensive Tactics",
+            "subclass": "hunter"
+          },
+          {
+            "id": "defensive-tactics-escape-the-horde",
+            "name": "Defensive Tactics: Escape the Horde",
+            "subclass": "hunter"
+          },
+          {
+            "id": "defensive-tactics-multiattack-defense",
+            "name": "Defensive Tactics: Multiattack Defense",
+            "subclass": "hunter"
+          },
+          {
+            "id": "defensive-tactics-steel-will",
+            "name": "Defensive Tactics: Steel Will",
+            "subclass": "hunter"
+          },
+          {
+            "id": "ranger-archetype-improvement-1",
+            "name": "Ranger Archetype feature",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 8,
+        "proficiencyBonus": 3,
+        "features": [
+          {
+            "id": "ranger-ability-score-improvement-2",
+            "name": "Ability Score Improvement",
+            "subclass": null
+          },
+          {
+            "id": "ranger-lands-stride",
+            "name": "Land's Stride",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 9,
+        "proficiencyBonus": 4,
+        "features": []
+      },
+      {
+        "level": 10,
+        "proficiencyBonus": 4,
+        "features": [
+          {
+            "id": "hide-in-plain-sight",
+            "name": "Hide in Plain Sight",
+            "subclass": null
+          },
+          {
+            "id": "natural-explorer-3-terrain-types",
+            "name": "Natural Explorer (3 terrain types)",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 11,
+        "proficiencyBonus": 4,
+        "features": [
+          {
+            "id": "multiattack",
+            "name": "Multiattack",
+            "subclass": "hunter"
+          },
+          {
+            "id": "multiattack-volley",
+            "name": "Multiattack: Volley",
+            "subclass": "hunter"
+          },
+          {
+            "id": "multiattack-whirlwind-attack",
+            "name": "Multiattack: Whirlwind Attack",
+            "subclass": "hunter"
+          },
+          {
+            "id": "ranger-archetype-improvement-2",
+            "name": "Ranger Archetype feature",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 12,
+        "proficiencyBonus": 4,
+        "features": [
+          {
+            "id": "ranger-ability-score-improvement-3",
+            "name": "Ability Score Improvement",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 13,
+        "proficiencyBonus": 5,
+        "features": []
+      },
+      {
+        "level": 14,
+        "proficiencyBonus": 5,
+        "features": [
+          {
+            "id": "favored-enemy-3-enemies",
+            "name": "Favored Enemy (3 enemies)",
+            "subclass": null
+          },
+          {
+            "id": "vanish",
+            "name": "Vanish",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 15,
+        "proficiencyBonus": 5,
+        "features": [
+          {
+            "id": "ranger-archetype-improvement-3",
+            "name": "Ranger Archetype feature",
+            "subclass": null
+          },
+          {
+            "id": "superior-hunters-defense",
+            "name": "Superior Hunter's Defense",
+            "subclass": "hunter"
+          },
+          {
+            "id": "superior-hunters-defense-evasion",
+            "name": "Superior Hunter's Defense: Evasion",
+            "subclass": "hunter"
+          },
+          {
+            "id": "superior-hunters-defense-stand-against-the-tide",
+            "name": "Superior Hunter's Defense: Stand Against the Tide",
+            "subclass": "hunter"
+          },
+          {
+            "id": "superior-hunters-defense-uncanny-dodge",
+            "name": "Superior Hunter's Defense: Uncanny Dodge",
+            "subclass": "hunter"
+          }
+        ]
+      },
+      {
+        "level": 16,
+        "proficiencyBonus": 5,
+        "features": [
+          {
+            "id": "ranger-ability-score-improvement-4",
+            "name": "Ability Score Improvement",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 17,
+        "proficiencyBonus": 6,
+        "features": []
+      },
+      {
+        "level": 18,
+        "proficiencyBonus": 6,
+        "features": [
+          {
+            "id": "feral-senses",
+            "name": "Feral Senses",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 19,
+        "proficiencyBonus": 6,
+        "features": [
+          {
+            "id": "ranger-ability-score-improvement-5",
+            "name": "Ability Score Improvement",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 20,
+        "proficiencyBonus": 6,
+        "features": [
+          {
+            "id": "foe-slayer",
+            "name": "Foe Slayer",
+            "subclass": null
+          }
+        ]
+      }
+    ],
+    "rogue": [
+      {
+        "level": 1,
+        "proficiencyBonus": 2,
+        "features": [
+          {
+            "id": "rogue-expertise-1",
+            "name": "Expertise",
+            "subclass": null
+          },
+          {
+            "id": "sneak-attack",
+            "name": "Sneak Attack",
+            "subclass": null
+          },
+          {
+            "id": "thieves-cant",
+            "name": "Thieves' Cant",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "proficiencyBonus": 2,
+        "features": [
+          {
+            "id": "cunning-action",
+            "name": "Cunning Action",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "proficiencyBonus": 2,
+        "features": [
+          {
+            "id": "fast-hands",
+            "name": "Fast Hands",
+            "subclass": "thief"
+          },
+          {
+            "id": "roguish-archetype",
+            "name": "Roguish Archetype",
+            "subclass": null
+          },
+          {
+            "id": "second-story-work",
+            "name": "Second-Story Work",
+            "subclass": "thief"
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "proficiencyBonus": 2,
+        "features": [
+          {
+            "id": "rogue-ability-score-improvement-1",
+            "name": "Ability Score Improvement",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "proficiencyBonus": 3,
+        "features": [
+          {
+            "id": "uncanny-dodge",
+            "name": "Uncanny Dodge",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 6,
+        "proficiencyBonus": 3,
+        "features": [
+          {
+            "id": "rogue-expertise-2",
+            "name": "Expertise",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 7,
+        "proficiencyBonus": 3,
+        "features": [
+          {
+            "id": "rogue-evasion",
+            "name": "Evasion",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 8,
+        "proficiencyBonus": 3,
+        "features": [
+          {
+            "id": "rogue-ability-score-improvement-2",
+            "name": "Ability Score Improvement",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 9,
+        "proficiencyBonus": 4,
+        "features": [
+          {
+            "id": "roguish-archetype-improvement-1",
+            "name": "Roguish Archetype feature",
+            "subclass": null
+          },
+          {
+            "id": "supreme-sneak",
+            "name": "Supreme Sneak",
+            "subclass": "thief"
+          }
+        ]
+      },
+      {
+        "level": 10,
+        "proficiencyBonus": 4,
+        "features": [
+          {
+            "id": "rogue-ability-score-improvement-3",
+            "name": "Ability Score Improvement",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 11,
+        "proficiencyBonus": 4,
+        "features": [
+          {
+            "id": "reliable-talent",
+            "name": "Reliable Talent",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 12,
+        "proficiencyBonus": 4,
+        "features": [
+          {
+            "id": "rogue-ability-score-improvement-4",
+            "name": "Ability Score Improvement",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 13,
+        "proficiencyBonus": 5,
+        "features": [
+          {
+            "id": "roguish-archetype-improvement-2",
+            "name": "Roguish Archetype feature",
+            "subclass": null
+          },
+          {
+            "id": "use-magic-device",
+            "name": "Use Magic Device",
+            "subclass": "thief"
+          }
+        ]
+      },
+      {
+        "level": 14,
+        "proficiencyBonus": 5,
+        "features": [
+          {
+            "id": "blindsense",
+            "name": "Blindsense",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 15,
+        "proficiencyBonus": 5,
+        "features": [
+          {
+            "id": "slippery-mind",
+            "name": "Slippery Mind",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 16,
+        "proficiencyBonus": 5,
+        "features": [
+          {
+            "id": "rogue-ability-score-improvement-5",
+            "name": "Ability Score Improvement",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 17,
+        "proficiencyBonus": 6,
+        "features": [
+          {
+            "id": "roguish-archetype-improvement-3",
+            "name": "Roguish Archetype feature",
+            "subclass": null
+          },
+          {
+            "id": "thiefs-reflexes",
+            "name": "Thief's Reflexes",
+            "subclass": "thief"
+          }
+        ]
+      },
+      {
+        "level": 18,
+        "proficiencyBonus": 6,
+        "features": [
+          {
+            "id": "elusive",
+            "name": "Elusive",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 19,
+        "proficiencyBonus": 6,
+        "features": [
+          {
+            "id": "rogue-ability-score-improvement-6",
+            "name": "Ability Score Improvement",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 20,
+        "proficiencyBonus": 6,
+        "features": [
+          {
+            "id": "stroke-of-luck",
+            "name": "Stroke of Luck",
+            "subclass": null
+          }
+        ]
+      }
+    ],
+    "sorcerer": [
+      {
+        "level": 1,
+        "proficiencyBonus": 2,
+        "features": [
+          {
+            "id": "draconic-resilience",
+            "name": "Draconic Resilience",
+            "subclass": "draconic"
+          },
+          {
+            "id": "dragon-ancestor",
+            "name": "Dragon Ancestor",
+            "subclass": "draconic"
+          },
+          {
+            "id": "dragon-ancestor-black---acid-damage",
+            "name": "Dragon Ancestor: Black - Acid Damage",
+            "subclass": "draconic"
+          },
+          {
+            "id": "dragon-ancestor-blue---lightning-damage",
+            "name": "Dragon Ancestor: Blue - Lightning Damage",
+            "subclass": "draconic"
+          },
+          {
+            "id": "dragon-ancestor-brass---fire-damage",
+            "name": "Dragon Ancestor: Brass - Fire Damage",
+            "subclass": "draconic"
+          },
+          {
+            "id": "dragon-ancestor-bronze---lightning-damage",
+            "name": "Dragon Ancestor: Bronze - Lightning Damage",
+            "subclass": "draconic"
+          },
+          {
+            "id": "dragon-ancestor-copper---acid-damage",
+            "name": "Dragon Ancestor: Copper - Acid Damage",
+            "subclass": "draconic"
+          },
+          {
+            "id": "dragon-ancestor-gold---fire-damage",
+            "name": "Dragon Ancestor: Gold - Fire Damage",
+            "subclass": "draconic"
+          },
+          {
+            "id": "dragon-ancestor-green---poison-damage",
+            "name": "Dragon Ancestor: Green - Poison Damage",
+            "subclass": "draconic"
+          },
+          {
+            "id": "dragon-ancestor-red---fire-damage",
+            "name": "Dragon Ancestor: Red - Fire Damage",
+            "subclass": "draconic"
+          },
+          {
+            "id": "dragon-ancestor-silver---cold-damage",
+            "name": "Dragon Ancestor: Silver - Cold Damage",
+            "subclass": "draconic"
+          },
+          {
+            "id": "dragon-ancestor-white---cold-damage",
+            "name": "Dragon Ancestor: White - Cold Damage",
+            "subclass": "draconic"
+          },
+          {
+            "id": "sorcerous-origin",
+            "name": "Sorcerous Origin",
+            "subclass": null
+          },
+          {
+            "id": "spellcasting-sorcerer",
+            "name": "Spellcasting: Sorcerer",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "proficiencyBonus": 2,
+        "features": [
+          {
+            "id": "flexible-casting-converting-spell-slot",
+            "name": "Flexible Casting: Converting Spell Slot",
+            "subclass": null
+          },
+          {
+            "id": "flexible-casting-creating-spell-slots",
+            "name": "Flexible Casting: Creating Spell Slots",
+            "subclass": null
+          },
+          {
+            "id": "font-of-magic",
+            "name": "Font of Magic",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "proficiencyBonus": 2,
+        "features": [
+          {
+            "id": "metamagic-1",
+            "name": "Metamagic",
+            "subclass": null
+          },
+          {
+            "id": "metamagic-careful-spell",
+            "name": "Metamagic: Careful Spell",
+            "subclass": null
+          },
+          {
+            "id": "metamagic-distant-spell",
+            "name": "Metamagic: Distant Spell",
+            "subclass": null
+          },
+          {
+            "id": "metamagic-empowered-spell",
+            "name": "Metamagic: Empowered Spell",
+            "subclass": null
+          },
+          {
+            "id": "metamagic-extended-spell",
+            "name": "Metamagic: Extended Spell",
+            "subclass": null
+          },
+          {
+            "id": "metamagic-heightened-spell",
+            "name": "Metamagic: Heightened Spell",
+            "subclass": null
+          },
+          {
+            "id": "metamagic-quickened-spell",
+            "name": "Metamagic: Quickened Spell",
+            "subclass": null
+          },
+          {
+            "id": "metamagic-subtle-spell",
+            "name": "Metamagic: Subtle Spell",
+            "subclass": null
+          },
+          {
+            "id": "metamagic-twinned-spell",
+            "name": "Metamagic: Twinned Spell",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "proficiencyBonus": 2,
+        "features": [
+          {
+            "id": "sorcerer-ability-score-improvement-1",
+            "name": "Ability Score Improvement",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "proficiencyBonus": 3,
+        "features": []
+      },
+      {
+        "level": 6,
+        "proficiencyBonus": 3,
+        "features": [
+          {
+            "id": "elemental-affinity",
+            "name": "Elemental Affinity",
+            "subclass": "draconic"
+          },
+          {
+            "id": "sorcerous-origin-improvement-1",
+            "name": "Sorcerous Origin feature",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 7,
+        "proficiencyBonus": 3,
+        "features": []
+      },
+      {
+        "level": 8,
+        "proficiencyBonus": 3,
+        "features": [
+          {
+            "id": "sorcerer-ability-score-improvement-2",
+            "name": "Ability Score Improvement",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 9,
+        "proficiencyBonus": 4,
+        "features": []
+      },
+      {
+        "level": 10,
+        "proficiencyBonus": 4,
+        "features": [
+          {
+            "id": "metamagic-2",
+            "name": "Metamagic",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 11,
+        "proficiencyBonus": 4,
+        "features": []
+      },
+      {
+        "level": 12,
+        "proficiencyBonus": 4,
+        "features": [
+          {
+            "id": "sorcerer-ability-score-improvement-3",
+            "name": "Ability Score Improvement",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 13,
+        "proficiencyBonus": 5,
+        "features": []
+      },
+      {
+        "level": 14,
+        "proficiencyBonus": 5,
+        "features": [
+          {
+            "id": "dragon-wings",
+            "name": "Dragon Wings",
+            "subclass": "draconic"
+          },
+          {
+            "id": "sorcerous-origin-improvement-2",
+            "name": "Sorcerous Origin feature",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 15,
+        "proficiencyBonus": 5,
+        "features": []
+      },
+      {
+        "level": 16,
+        "proficiencyBonus": 5,
+        "features": [
+          {
+            "id": "sorcerer-ability-score-improvement-4",
+            "name": "Ability Score Improvement",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 17,
+        "proficiencyBonus": 6,
+        "features": [
+          {
+            "id": "metamagic-3",
+            "name": "Metamagic",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 18,
+        "proficiencyBonus": 6,
+        "features": [
+          {
+            "id": "draconic-presence",
+            "name": "Draconic Presence",
+            "subclass": "draconic"
+          },
+          {
+            "id": "sorcerous-origin-improvement-3",
+            "name": "Sorcerous Origin feature",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 19,
+        "proficiencyBonus": 6,
+        "features": [
+          {
+            "id": "sorcerer-ability-score-improvement-5",
+            "name": "Ability Score Improvement",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 20,
+        "proficiencyBonus": 6,
+        "features": [
+          {
+            "id": "sorcerous-restoration",
+            "name": "Sorcerous Restoration",
+            "subclass": null
+          }
+        ]
+      }
+    ],
+    "warlock": [
+      {
+        "level": 1,
+        "proficiencyBonus": 2,
+        "features": [
+          {
+            "id": "dark-ones-blessing",
+            "name": "Dark One's Blessing",
+            "subclass": "fiend"
+          },
+          {
+            "id": "otherworldly-patron",
+            "name": "Otherworldly Patron",
+            "subclass": null
+          },
+          {
+            "id": "pact-magic",
+            "name": "Pact Magic",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "proficiencyBonus": 2,
+        "features": [
+          {
+            "id": "eldritch-invocation-agonizing-blast",
+            "name": "Eldritch Invocation: Agonizing Blast",
+            "subclass": null
+          },
+          {
+            "id": "eldritch-invocation-armor-of-shadows",
+            "name": "Eldritch Invocation: Armor of Shadows",
+            "subclass": null
+          },
+          {
+            "id": "eldritch-invocation-beast-speech",
+            "name": "Eldritch Invocation: Beast Speech",
+            "subclass": null
+          },
+          {
+            "id": "eldritch-invocation-beguiling-influence",
+            "name": "Eldritch Invocation: Beguiling Influence",
+            "subclass": null
+          },
+          {
+            "id": "eldritch-invocation-book-of-ancient-secrets",
+            "name": "Eldritch Invocation: Book of Ancient Secrets",
+            "subclass": null
+          },
+          {
+            "id": "eldritch-invocation-devils-sight",
+            "name": "Eldritch Invocation: Devil's Sight",
+            "subclass": null
+          },
+          {
+            "id": "eldritch-invocation-eldritch-sight",
+            "name": "Eldritch Invocation: Eldritch Sight",
+            "subclass": null
+          },
+          {
+            "id": "eldritch-invocation-eldritch-spear",
+            "name": "Eldritch Invocation: Eldritch Spear",
+            "subclass": null
+          },
+          {
+            "id": "eldritch-invocation-eyes-of-the-rune-keeper",
+            "name": "Eldritch Invocation: Eyes of the Rune Keeper",
+            "subclass": null
+          },
+          {
+            "id": "eldritch-invocation-fiendish-vigor",
+            "name": "Eldritch Invocation: Fiendish Vigor",
+            "subclass": null
+          },
+          {
+            "id": "eldritch-invocation-gaze-of-two-minds",
+            "name": "Eldritch Invocation: Gaze of Two Minds",
+            "subclass": null
+          },
+          {
+            "id": "eldritch-invocation-mask-of-many-faces",
+            "name": "Eldritch Invocation: Mask of Many Faces",
+            "subclass": null
+          },
+          {
+            "id": "eldritch-invocation-misty-visions",
+            "name": "Eldritch Invocation: Misty Visions",
+            "subclass": null
+          },
+          {
+            "id": "eldritch-invocation-repelling-blast",
+            "name": "Eldritch Invocation: Repelling Blast",
+            "subclass": null
+          },
+          {
+            "id": "eldritch-invocation-thief-of-five-fates",
+            "name": "Eldritch Invocation: Thief of Five Fates",
+            "subclass": null
+          },
+          {
+            "id": "eldritch-invocation-voice-of-the-chain-master",
+            "name": "Eldritch Invocation: Voice of the Chain Master",
+            "subclass": null
+          },
+          {
+            "id": "eldritch-invocations",
+            "name": "Eldritch Invocations",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "proficiencyBonus": 2,
+        "features": [
+          {
+            "id": "pact-boon",
+            "name": "Pact Boon",
+            "subclass": null
+          },
+          {
+            "id": "pact-of-the-blade",
+            "name": "Pact of the Blade",
+            "subclass": null
+          },
+          {
+            "id": "pact-of-the-chain",
+            "name": "Pact of the Chain",
+            "subclass": null
+          },
+          {
+            "id": "pact-of-the-tome",
+            "name": "Pact of the Tome",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "proficiencyBonus": 2,
+        "features": [
+          {
+            "id": "warlock-ability-score-improvement-1",
+            "name": "Ability Score Improvement",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "proficiencyBonus": 3,
+        "features": [
+          {
+            "id": "eldritch-invocation-mire-the-mind",
+            "name": "Eldritch Invocation: Mire the Mind",
+            "subclass": null
+          },
+          {
+            "id": "eldritch-invocation-one-with-shadows",
+            "name": "Eldritch Invocation: One with Shadows",
+            "subclass": null
+          },
+          {
+            "id": "eldritch-invocation-sign-of-ill-omen",
+            "name": "Eldritch Invocation: Sign of Ill Omen",
+            "subclass": null
+          },
+          {
+            "id": "eldritch-invocation-thirsting-blade",
+            "name": "Eldritch Invocation: Thirsting Blade",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 6,
+        "proficiencyBonus": 3,
+        "features": [
+          {
+            "id": "dark-ones-own-luck",
+            "name": "Dark One's Own Luck",
+            "subclass": "fiend"
+          },
+          {
+            "id": "otherworldly-patron-improvement-1",
+            "name": "Otherworldly Patron feature",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 7,
+        "proficiencyBonus": 3,
+        "features": [
+          {
+            "id": "eldritch-invocation-bewitching-whispers",
+            "name": "Eldritch Invocation: Bewitching Whispers",
+            "subclass": null
+          },
+          {
+            "id": "eldritch-invocation-dreadful-word",
+            "name": "Eldritch Invocation: Dreadful Word",
+            "subclass": null
+          },
+          {
+            "id": "eldritch-invocation-sculptor-of-flesh",
+            "name": "Eldritch Invocation: Sculptor of Flesh",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 8,
+        "proficiencyBonus": 3,
+        "features": [
+          {
+            "id": "warlock-ability-score-improvement-2",
+            "name": "Ability Score Improvement",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 9,
+        "proficiencyBonus": 4,
+        "features": [
+          {
+            "id": "eldritch-invocation-ascendant-step",
+            "name": "Eldritch Invocation: Ascendant Step",
+            "subclass": null
+          },
+          {
+            "id": "eldritch-invocation-minions-of-chaos",
+            "name": "Eldritch Invocation: Minions of Chaos",
+            "subclass": null
+          },
+          {
+            "id": "eldritch-invocation-otherworldly-leap",
+            "name": "Eldritch Invocation: Otherworldly Leap",
+            "subclass": null
+          },
+          {
+            "id": "eldritch-invocation-whispers-of-the-grave",
+            "name": "Eldritch Invocation: Whispers of the Grave",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 10,
+        "proficiencyBonus": 4,
+        "features": [
+          {
+            "id": "fiendish-resilience",
+            "name": "Fiendish Resilience",
+            "subclass": "fiend"
+          },
+          {
+            "id": "otherworldly-patron-improvement-2",
+            "name": "Otherworldly Patron feature",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 11,
+        "proficiencyBonus": 4,
+        "features": [
+          {
+            "id": "mystic-arcanum-6th-level",
+            "name": "Mystic Arcanum (6th level)",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 12,
+        "proficiencyBonus": 4,
+        "features": [
+          {
+            "id": "eldritch-invocation-lifedrinker",
+            "name": "Eldritch Invocation: Lifedrinker",
+            "subclass": null
+          },
+          {
+            "id": "warlock-ability-score-improvement-3",
+            "name": "Ability Score Improvement",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 13,
+        "proficiencyBonus": 5,
+        "features": [
+          {
+            "id": "mystic-arcanum-7th-level",
+            "name": "Mystic Arcanum (7th level)",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 14,
+        "proficiencyBonus": 5,
+        "features": [
+          {
+            "id": "hurl-through-hell",
+            "name": "Hurl Through Hell",
+            "subclass": "fiend"
+          },
+          {
+            "id": "otherworldly-patron-improvement-3",
+            "name": "Otherworldly Patron feature",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 15,
+        "proficiencyBonus": 5,
+        "features": [
+          {
+            "id": "eldritch-invocation-chains-of-carceri",
+            "name": "Eldritch Invocation: Chains of Carceri",
+            "subclass": null
+          },
+          {
+            "id": "eldritch-invocation-master-of-myriad-forms",
+            "name": "Eldritch Invocation: Master of Myriad Forms",
+            "subclass": null
+          },
+          {
+            "id": "eldritch-invocation-visions-of-distant-realms",
+            "name": "Eldritch Invocation: Visions of Distant Realms",
+            "subclass": null
+          },
+          {
+            "id": "eldritch-invocation-witch-sight",
+            "name": "Eldritch Invocation: Witch Sight",
+            "subclass": null
+          },
+          {
+            "id": "mystic-arcanum-8th-level",
+            "name": "Mystic Arcanum (8th level)",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 16,
+        "proficiencyBonus": 5,
+        "features": [
+          {
+            "id": "warlock-ability-score-improvement-4",
+            "name": "Ability Score Improvement",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 17,
+        "proficiencyBonus": 6,
+        "features": [
+          {
+            "id": "mystic-arcanum-9th-level",
+            "name": "Mystic Arcanum (9th level)",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 18,
+        "proficiencyBonus": 6,
+        "features": []
+      },
+      {
+        "level": 19,
+        "proficiencyBonus": 6,
+        "features": [
+          {
+            "id": "warlock-ability-score-improvement-5",
+            "name": "Ability Score Improvement",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 20,
+        "proficiencyBonus": 6,
+        "features": [
+          {
+            "id": "eldritch-master",
+            "name": "Eldritch Master",
+            "subclass": null
+          }
+        ]
+      }
+    ],
+    "wizard": [
+      {
+        "level": 1,
+        "proficiencyBonus": 2,
+        "features": [
+          {
+            "id": "arcane-recovery",
+            "name": "Arcane Recovery",
+            "subclass": null
+          },
+          {
+            "id": "spellcasting-wizard",
+            "name": "Spellcasting: Wizard",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "proficiencyBonus": 2,
+        "features": [
+          {
+            "id": "arcane-tradition",
+            "name": "Arcane Tradition",
+            "subclass": null
+          },
+          {
+            "id": "evocation-savant",
+            "name": "Evocation Savant",
+            "subclass": "evocation"
+          },
+          {
+            "id": "sculpt-spells",
+            "name": "Sculpt Spells",
+            "subclass": "evocation"
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "proficiencyBonus": 2,
+        "features": []
+      },
+      {
+        "level": 4,
+        "proficiencyBonus": 2,
+        "features": [
+          {
+            "id": "wizard-ability-score-improvement-1",
+            "name": "Ability Score Improvement",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "proficiencyBonus": 3,
+        "features": []
+      },
+      {
+        "level": 6,
+        "proficiencyBonus": 3,
+        "features": [
+          {
+            "id": "arcane-tradition-improvement-1",
+            "name": "Arcane Tradition feature",
+            "subclass": null
+          },
+          {
+            "id": "potent-cantrip",
+            "name": "Potent Cantrip",
+            "subclass": "evocation"
+          }
+        ]
+      },
+      {
+        "level": 7,
+        "proficiencyBonus": 3,
+        "features": []
+      },
+      {
+        "level": 8,
+        "proficiencyBonus": 3,
+        "features": [
+          {
+            "id": "wizard-ability-score-improvement-2",
+            "name": "Ability Score Improvement",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 9,
+        "proficiencyBonus": 4,
+        "features": []
+      },
+      {
+        "level": 10,
+        "proficiencyBonus": 4,
+        "features": [
+          {
+            "id": "arcane-tradition-improvement-2",
+            "name": "Arcane Tradition feature",
+            "subclass": null
+          },
+          {
+            "id": "empowered-evocation",
+            "name": "Empowered Evocation",
+            "subclass": "evocation"
+          }
+        ]
+      },
+      {
+        "level": 11,
+        "proficiencyBonus": 4,
+        "features": []
+      },
+      {
+        "level": 12,
+        "proficiencyBonus": 4,
+        "features": [
+          {
+            "id": "wizard-ability-score-improvement-3",
+            "name": "Ability Score Improvement",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 13,
+        "proficiencyBonus": 5,
+        "features": []
+      },
+      {
+        "level": 14,
+        "proficiencyBonus": 5,
+        "features": [
+          {
+            "id": "arcane-tradition-improvement-3",
+            "name": "Arcane Tradition feature",
+            "subclass": null
+          },
+          {
+            "id": "overchannel",
+            "name": "Overchannel",
+            "subclass": "evocation"
+          }
+        ]
+      },
+      {
+        "level": 15,
+        "proficiencyBonus": 5,
+        "features": []
+      },
+      {
+        "level": 16,
+        "proficiencyBonus": 5,
+        "features": [
+          {
+            "id": "wizard-ability-score-improvement-4",
+            "name": "Ability Score Improvement",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 17,
+        "proficiencyBonus": 6,
+        "features": []
+      },
+      {
+        "level": 18,
+        "proficiencyBonus": 6,
+        "features": [
+          {
+            "id": "spell-mastery",
+            "name": "Spell Mastery",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 19,
+        "proficiencyBonus": 6,
+        "features": [
+          {
+            "id": "wizard-ability-score-improvement-5",
+            "name": "Ability Score Improvement",
+            "subclass": null
+          }
+        ]
+      },
+      {
+        "level": 20,
+        "proficiencyBonus": 6,
+        "features": [
+          {
+            "id": "signature-spell",
+            "name": "Signature Spell",
+            "subclass": null
+          }
+        ]
+      }
+    ]
+  }
+}

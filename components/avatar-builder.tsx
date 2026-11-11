@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import { useMemo, useState, useRef, useId, useEffect } from "react";
 
 export type AvatarConfig = {

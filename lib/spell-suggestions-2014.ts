@@ -1,0 +1,10 @@
+/** Aide à la saisie, liste indicative non exhaustive de noms de sorts D&D 5e (2014).
+ * Ne remplace pas la vérification dans les règles utilisées par la table. */
+export const spellSuggestions2014: Record<string, { cantrips: string[]; levelOne: string[] }> = {
+  Barde: { cantrips: ['Lumière', 'Main du mage', 'Message', 'Prestidigitation', 'Moquerie cruelle', 'Réparation'], levelOne: ['Charme-personne', 'Compréhension des langues', 'Détection de la magie', 'Déguisement', 'Feuille morte', 'Mot de guérison', 'Sommeil', 'Vague tonnante'] },
+  Clerc: { cantrips: ['Assistance', 'Flamme sacrée', 'Lumière', 'Réparation', 'Résistance', 'Thaumaturgie'], levelOne: ['Bénédiction', 'Bouclier de la foi', 'Détection de la magie', 'Injonction', 'Mot de guérison', 'Sanctuaire', 'Soins', 'Protection contre le mal et le bien'] },
+  Druide: { cantrips: ['Assistance', 'Bouffée de poison', 'Druidisme', 'Produire une flamme', 'Réparation', 'Résistance'], levelOne: ['Baies nourricières', 'Charme-personne', 'Détection de la magie', 'Enchevêtrement', 'Mot de guérison', 'Nappe de brouillard', 'Soins', 'Vague tonnante'] },
+  Ensorceleur: { cantrips: ['Aspersion acide', 'Bouffée de poison', 'Lumière', 'Main du mage', 'Prestidigitation', 'Rayon de givre', 'Trait de feu'], levelOne: ['Armure de mage', 'Bouclier', 'Charme-personne', 'Détection de la magie', 'Mains brûlantes', 'Orbe chromatique', 'Projectile magique', 'Sommeil'] },
+  Occultiste: { cantrips: ['Contact glacial', 'Décharge occulte', 'Illusion mineure', 'Main du mage', 'Prestidigitation'], levelOne: ['Armure d’Agathys', 'Charme-personne', 'Compréhension des langues', 'Maléfice', 'Protection contre le mal et le bien', 'Représailles infernales'] },
+  Magicien: { cantrips: ['Aspersion acide', 'Contact glacial', 'Illusion mineure', 'Lumière', 'Main du mage', 'Prestidigitation', 'Rayon de givre', 'Trait de feu'], levelOne: ['Armure de mage', 'Bouclier', 'Charme-personne', 'Détection de la magie', 'Déguisement', 'Mains brûlantes', 'Projectile magique', 'Sommeil', 'Vague tonnante'] },
+};

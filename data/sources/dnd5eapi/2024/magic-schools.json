@@ -1,0 +1,58 @@
+[
+  {
+    "index": "abjuration",
+    "name": "Abjuration",
+    "description": "Prevents or reverses harmful effects",
+    "url": "/api/2024/magic-schools/abjuration",
+    "updated_at": "2026-04-23T07:06:27.827Z"
+  },
+  {
+    "index": "conjuration",
+    "name": "Conjuration",
+    "description": "Transports creatures or objects",
+    "url": "/api/2024/magic-schools/conjuration",
+    "updated_at": "2026-04-23T07:06:27.827Z"
+  },
+  {
+    "index": "divination",
+    "name": "Divination",
+    "description": "Reveals information",
+    "url": "/api/2024/magic-schools/divination",
+    "updated_at": "2026-04-23T07:06:27.827Z"
+  },
+  {
+    "index": "enchantment",
+    "name": "Enchantment",
+    "description": "Influences minds",
+    "url": "/api/2024/magic-schools/enchantment",
+    "updated_at": "2026-04-23T07:06:27.827Z"
+  },
+  {
+    "index": "evocation",
+    "name": "Evocation",
+    "description": "Channels energy to create effects that are often destructive",
+    "url": "/api/2024/magic-schools/evocation",
+    "updated_at": "2026-04-23T07:06:27.827Z"
+  },
+  {
+    "index": "illusion",
+    "name": "Illusion",
+    "description": "Deceives the mind or senses",
+    "url": "/api/2024/magic-schools/illusion",
+    "updated_at": "2026-04-23T07:06:27.827Z"
+  },
+  {
+    "index": "necromancy",
+    "name": "Necromancy",
+    "description": "Manipulates life and death",
+    "url": "/api/2024/magic-schools/necromancy",
+    "updated_at": "2026-04-23T07:06:27.827Z"
+  },
+  {
+    "index": "transmutation",
+    "name": "Transmutation",
+    "description": "Transforms creatures or objects",
+    "url": "/api/2024/magic-schools/transmutation",
+    "updated_at": "2026-04-23T07:06:27.827Z"
+  }
+]

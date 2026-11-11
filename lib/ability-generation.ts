@@ -31,10 +31,14 @@ export function validGeneration(scores:Scores,method:GenerationMethod):boolean {
   return method==='standard'?validStandardArray(scores):validPointBuy(scores);
 }
 export function validHalfElfChoices(race:string,choices:Ability[]):boolean {
-  return race!=='Demi-elfe'||(choices.length===2&&new Set(choices).size===2&&choices.every(a=>abilities.includes(a)&&a!=='CHA'));
+  return race==='Demi-elfe'
+    ? choices.length===2&&new Set(choices).size===2&&choices.every(a=>abilities.includes(a)&&a!=='CHA')
+    : choices.length===0;
 }
 export function validSubrace(race:string,subrace:string):boolean {
-  return !subraces[race] || Object.prototype.hasOwnProperty.call(subraces[race],subrace);
+  return subraces[race]
+    ? Object.prototype.hasOwnProperty.call(subraces[race],subrace)
+    : subrace==='';
 }
 export function finalAbilityScores(base:Scores,race:string,halfElfChoices:Ability[]=[],subrace='',method:GenerationMethod='standard'):Scores {
   if(!validGeneration(base,method))throw new Error('Répartition des caractéristiques invalide.');

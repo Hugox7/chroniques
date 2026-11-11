@@ -16,12 +16,11 @@ const fullCasterSlots:number[][]=[
 const pactSlots=[1,2,2,2,2,2,2,2,2,2,3,3,3,3,3,3,4,4,4,4];
 const pactLevel=[1,1,2,2,3,3,4,4,5,5,5,5,5,5,5,5,5,5,5,5];
 export function spellSlots2014(cls:string,level:number):number[]{
-  if(level<1||level>20)return [];
+  if(!Number.isInteger(level)||level<1||level>20)return [];
   if(cls==='Occultiste')return Array.from({length:pactLevel[level-1]},(_,i)=>i===pactLevel[level-1]-1?pactSlots[level-1]:0);
-  const half=cls==='Paladin'||cls==='Rôdeur';
-  if(!half&&!['Barde','Clerc','Druide','Ensorceleur','Magicien'].includes(cls))return [];
-  const casterLevel=half?Math.floor(level/2):level;
-  return casterLevel>0?[...fullCasterSlots[casterLevel-1]]:[];
+  if(cls==='Paladin'||cls==='Rôdeur')return level<2?[]:[...fullCasterSlots[Math.ceil(level/2)-1]];
+  if(!['Barde','Clerc','Druide','Ensorceleur','Magicien'].includes(cls))return [];
+  return [...fullCasterSlots[level-1]];
 }
 export function spellSaveDC(c:Character){const a=spellcastingAbility[c.class_name];return a?8+proficiency(c.level)+mod(c.abilities[a]):null}
 export function spellAttackBonus(c:Character){const a=spellcastingAbility[c.class_name];return a?proficiency(c.level)+mod(c.abilities[a]):null}

@@ -1,0 +1,444 @@
+[
+  {
+    "index": "battleaxe",
+    "name": "Battleaxe",
+    "category": "Martial",
+    "range": "Melee",
+    "damage": "1d8",
+    "damageType": "slashing",
+    "properties": [
+      "versatile"
+    ]
+  },
+  {
+    "index": "blowgun",
+    "name": "Blowgun",
+    "category": "Martial",
+    "range": "Ranged",
+    "damage": "1",
+    "damageType": "piercing",
+    "properties": [
+      "ammunition",
+      "loading"
+    ]
+  },
+  {
+    "index": "club",
+    "name": "Club",
+    "category": "Simple",
+    "range": "Melee",
+    "damage": "1d4",
+    "damageType": "bludgeoning",
+    "properties": [
+      "light",
+      "monk"
+    ]
+  },
+  {
+    "index": "crossbow-hand",
+    "name": "Crossbow, hand",
+    "category": "Martial",
+    "range": "Ranged",
+    "damage": "1d6",
+    "damageType": "piercing",
+    "properties": [
+      "ammunition",
+      "light",
+      "loading"
+    ]
+  },
+  {
+    "index": "crossbow-heavy",
+    "name": "Crossbow, heavy",
+    "category": "Martial",
+    "range": "Ranged",
+    "damage": "1d10",
+    "damageType": "piercing",
+    "properties": [
+      "ammunition",
+      "heavy",
+      "loading",
+      "two-handed"
+    ]
+  },
+  {
+    "index": "crossbow-light",
+    "name": "Crossbow, light",
+    "category": "Simple",
+    "range": "Ranged",
+    "damage": "1d8",
+    "damageType": "piercing",
+    "properties": [
+      "ammunition",
+      "loading",
+      "two-handed"
+    ]
+  },
+  {
+    "index": "dagger",
+    "name": "Dagger",
+    "category": "Simple",
+    "range": "Melee",
+    "damage": "1d4",
+    "damageType": "piercing",
+    "properties": [
+      "finesse",
+      "light",
+      "thrown",
+      "monk"
+    ]
+  },
+  {
+    "index": "dart",
+    "name": "Dart",
+    "category": "Simple",
+    "range": "Ranged",
+    "damage": "1d4",
+    "damageType": "piercing",
+    "properties": [
+      "finesse",
+      "thrown"
+    ]
+  },
+  {
+    "index": "flail",
+    "name": "Flail",
+    "category": "Martial",
+    "range": "Melee",
+    "damage": "1d8",
+    "damageType": "bludgeoning",
+    "properties": []
+  },
+  {
+    "index": "glaive",
+    "name": "Glaive",
+    "category": "Martial",
+    "range": "Melee",
+    "damage": "1d10",
+    "damageType": "slashing",
+    "properties": [
+      "heavy",
+      "reach",
+      "two-handed"
+    ]
+  },
+  {
+    "index": "greataxe",
+    "name": "Greataxe",
+    "category": "Martial",
+    "range": "Melee",
+    "damage": "1d12",
+    "damageType": "slashing",
+    "properties": [
+      "heavy",
+      "two-handed"
+    ]
+  },
+  {
+    "index": "greatclub",
+    "name": "Greatclub",
+    "category": "Simple",
+    "range": "Melee",
+    "damage": "1d8",
+    "damageType": "bludgeoning",
+    "properties": [
+      "two-handed"
+    ]
+  },
+  {
+    "index": "greatsword",
+    "name": "Greatsword",
+    "category": "Martial",
+    "range": "Melee",
+    "damage": "2d6",
+    "damageType": "slashing",
+    "properties": [
+      "heavy",
+      "two-handed"
+    ]
+  },
+  {
+    "index": "halberd",
+    "name": "Halberd",
+    "category": "Martial",
+    "range": "Melee",
+    "damage": "1d10",
+    "damageType": "slashing",
+    "properties": [
+      "heavy",
+      "reach",
+      "two-handed"
+    ]
+  },
+  {
+    "index": "handaxe",
+    "name": "Handaxe",
+    "category": "Simple",
+    "range": "Melee",
+    "damage": "1d6",
+    "damageType": "slashing",
+    "properties": [
+      "light",
+      "thrown",
+      "monk"
+    ]
+  },
+  {
+    "index": "javelin",
+    "name": "Javelin",
+    "category": "Simple",
+    "range": "Melee",
+    "damage": "1d6",
+    "damageType": "piercing",
+    "properties": [
+      "thrown",
+      "monk"
+    ]
+  },
+  {
+    "index": "lance",
+    "name": "Lance",
+    "category": "Martial",
+    "range": "Melee",
+    "damage": "1d12",
+    "damageType": "piercing",
+    "properties": [
+      "reach",
+      "special"
+    ]
+  },
+  {
+    "index": "light-hammer",
+    "name": "Light hammer",
+    "category": "Simple",
+    "range": "Melee",
+    "damage": "1d4",
+    "damageType": "bludgeoning",
+    "properties": [
+      "light",
+      "thrown",
+      "monk"
+    ]
+  },
+  {
+    "index": "longbow",
+    "name": "Longbow",
+    "category": "Martial",
+    "range": "Ranged",
+    "damage": "1d8",
+    "damageType": "piercing",
+    "properties": [
+      "ammunition",
+      "heavy",
+      "two-handed"
+    ]
+  },
+  {
+    "index": "longsword",
+    "name": "Longsword",
+    "category": "Martial",
+    "range": "Melee",
+    "damage": "1d8",
+    "damageType": "slashing",
+    "properties": [
+      "versatile"
+    ]
+  },
+  {
+    "index": "mace",
+    "name": "Mace",
+    "category": "Simple",
+    "range": "Melee",
+    "damage": "1d6",
+    "damageType": "bludgeoning",
+    "properties": [
+      "monk"
+    ]
+  },
+  {
+    "index": "maul",
+    "name": "Maul",
+    "category": "Martial",
+    "range": "Melee",
+    "damage": "2d6",
+    "damageType": "bludgeoning",
+    "properties": [
+      "heavy",
+      "two-handed"
+    ]
+  },
+  {
+    "index": "morningstar",
+    "name": "Morningstar",
+    "category": "Martial",
+    "range": "Melee",
+    "damage": "1d8",
+    "damageType": "piercing",
+    "properties": []
+  },
+  {
+    "index": "net",
+    "name": "Net",
+    "category": "Martial",
+    "range": "Ranged",
+    "damage": "",
+    "damageType": "",
+    "properties": [
+      "thrown",
+      "special"
+    ]
+  },
+  {
+    "index": "pike",
+    "name": "Pike",
+    "category": "Martial",
+    "range": "Melee",
+    "damage": "1d10",
+    "damageType": "piercing",
+    "properties": [
+      "heavy",
+      "reach",
+      "two-handed"
+    ]
+  },
+  {
+    "index": "quarterstaff",
+    "name": "Quarterstaff",
+    "category": "Simple",
+    "range": "Melee",
+    "damage": "1d6",
+    "damageType": "bludgeoning",
+    "properties": [
+      "versatile",
+      "monk"
+    ]
+  },
+  {
+    "index": "rapier",
+    "name": "Rapier",
+    "category": "Martial",
+    "range": "Melee",
+    "damage": "1d8",
+    "damageType": "piercing",
+    "properties": [
+      "finesse"
+    ]
+  },
+  {
+    "index": "scimitar",
+    "name": "Scimitar",
+    "category": "Martial",
+    "range": "Melee",
+    "damage": "1d6",
+    "damageType": "slashing",
+    "properties": [
+      "finesse",
+      "light"
+    ]
+  },
+  {
+    "index": "shortbow",
+    "name": "Shortbow",
+    "category": "Simple",
+    "range": "Ranged",
+    "damage": "1d6",
+    "damageType": "piercing",
+    "properties": [
+      "ammunition",
+      "two-handed"
+    ]
+  },
+  {
+    "index": "shortsword",
+    "name": "Shortsword",
+    "category": "Martial",
+    "range": "Melee",
+    "damage": "1d6",
+    "damageType": "piercing",
+    "properties": [
+      "finesse",
+      "light",
+      "monk"
+    ]
+  },
+  {
+    "index": "sickle",
+    "name": "Sickle",
+    "category": "Simple",
+    "range": "Melee",
+    "damage": "1d4",
+    "damageType": "slashing",
+    "properties": [
+      "light",
+      "monk"
+    ]
+  },
+  {
+    "index": "sling",
+    "name": "Sling",
+    "category": "Simple",
+    "range": "Ranged",
+    "damage": "1d4",
+    "damageType": "bludgeoning",
+    "properties": [
+      "ammunition"
+    ]
+  },
+  {
+    "index": "spear",
+    "name": "Spear",
+    "category": "Simple",
+    "range": "Melee",
+    "damage": "1d6",
+    "damageType": "piercing",
+    "properties": [
+      "thrown",
+      "versatile",
+      "monk"
+    ]
+  },
+  {
+    "index": "trident",
+    "name": "Trident",
+    "category": "Martial",
+    "range": "Melee",
+    "damage": "1d6",
+    "damageType": "piercing",
+    "properties": [
+      "thrown",
+      "versatile"
+    ]
+  },
+  {
+    "index": "war-pick",
+    "name": "War pick",
+    "category": "Martial",
+    "range": "Melee",
+    "damage": "1d8",
+    "damageType": "piercing",
+    "properties": []
+  },
+  {
+    "index": "warhammer",
+    "name": "Warhammer",
+    "category": "Martial",
+    "range": "Melee",
+    "damage": "1d8",
+    "damageType": "bludgeoning",
+    "properties": [
+      "versatile"
+    ]
+  },
+  {
+    "index": "whip",
+    "name": "Whip",
+    "category": "Martial",
+    "range": "Melee",
+    "damage": "1d4",
+    "damageType": "slashing",
+    "properties": [
+      "finesse",
+      "reach"
+    ]
+  }
+]

@@ -13,15 +13,15 @@ export default function AiCharacterPortrait({characterId,appearance,onChosen}:{c
  useEffect(()=>{let active=true;request('GET').then(s=>{if(active)setState(s)}).catch(e=>{if(active){setState({status:'error'});setError(e.message)}});return()=>{active=false}},[request]);
  async function generate(){if(!appearance.trim()||appearance.startsWith('CD_AVATAR_V1:'))return setError('Décris d’abord ton personnage.');
  const parsed=parsePortraitAppearance(appearance);const recap=parsed?Object.entries(parsed.fields).map(([key,value])=>`${portraitLabels[key as keyof typeof portraitLabels]} : ${value}`).join('\n')+`\nDétails : ${parsed.details||'Aucun'}`:appearance.slice(0,500);
- if(!window.confirm(`Dernière vérification avant génération !\n\nApparence : ${recap}\n\nDeux portraits seront générés une seule fois. Tu devras en choisir un, sans pouvoir revenir sur ses caractéristiques ni relancer la génération. Confirmer ?`))return;
- setBusy(true);setError('');try{setState(await request('POST'))}catch(e){setError((e as Error).message);try{setState(await request('GET'))}catch{}}finally{setBusy(false)}
+ if(!window.confirm(`Dernière vérification avant génération !\n\nApparence : ${recap}\n\nUn portrait définitif sera généré une seule fois, sans possibilité de relancer la génération. Confirmer ?`))return;
+ setBusy(true);setError('');try{setState(await request('POST'));onChosen?.()}catch(e){setError((e as Error).message);try{setState(await request('GET'))}catch{}}finally{setBusy(false)}
  }
  async function choose(index:number){if(!window.confirm('Confirmer ce portrait définitivement ? Aucun changement ne sera possible ensuite.'))return;setBusy(true);setError('');try{setState(await request('PATCH',index));onChosen?.()}catch(e){setError((e as Error).message)}finally{setBusy(false)}}
  return <section style={{marginTop:16}}><h3>Portrait fantasy IA</h3>
  {error&&<p className="notice error" role="alert">{error}</p>}
  {state.status==='loading'&&<p>Chargement du portrait…</p>}
  {state.status==='generating'&&<p>Génération en cours. Actualise la page dans quelques instants.</p>}
- {state.status==='none'&&<><p className="hint">Deux portraits te seront proposés. Une seule génération par personnage : vérifie ta description avant de continuer.</p><button type="button" className="btn gold" disabled={busy||!appearance.trim()||appearance.startsWith('CD_AVATAR_V1:')} onClick={generate}>{busy?'Génération en cours…':'Générer mes deux portraits'}</button></>}
+ {state.status==='none'&&<><p className="hint">Un portrait définitif sera créé. Vérifie ta description avant de continuer : une seule génération est possible.</p><button type="button" className="btn gold" disabled={busy||!appearance.trim()||appearance.startsWith('CD_AVATAR_V1:')} onClick={generate}>{busy?'Génération en cours…':'Générer mon portrait'}</button></>}
  {state.status==='ready'&&<><p>Choisis ton portrait définitif parmi ces deux propositions.</p><div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(180px,1fr))',gap:16}}>{state.urls?.map((url,i)=><div key={i}><img src={url} alt={`Portrait proposé ${i+1}`} style={{width:'100%',aspectRatio:'2 / 3',objectFit:'cover',borderRadius:12}}/><button type="button" className="btn gold" disabled={busy} onClick={()=>choose(i)}>Choisir ce portrait</button></div>)}</div></>}
  {state.status==='chosen'&&<><p className="hint">Portrait définitif enregistré.</p>{state.urls?.[0]&&<img src={state.urls[0]} alt="Portrait définitif du personnage" style={{width:'min(100%,300px)',aspectRatio:'2 / 3',objectFit:'cover',borderRadius:12}}/>}</>}
  </section>

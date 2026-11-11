@@ -1,0 +1,93 @@
+[
+  {
+    "index": "acid",
+    "name": "Acid",
+    "description": "Corrosive liquids, digestive enzymes",
+    "url": "/api/2024/damage-types/acid",
+    "updated_at": "2026-04-23T07:06:26.645Z"
+  },
+  {
+    "index": "bludgeoning",
+    "name": "Bludgeoning",
+    "description": "Blunt objects, constriction, falling",
+    "url": "/api/2024/damage-types/bludgeoning",
+    "updated_at": "2026-04-23T07:06:26.645Z"
+  },
+  {
+    "index": "cold",
+    "name": "Cold",
+    "description": "Freezing water, icy blasts",
+    "url": "/api/2024/damage-types/cold",
+    "updated_at": "2026-04-23T07:06:26.645Z"
+  },
+  {
+    "index": "fire",
+    "name": "Fire",
+    "description": "Flames, unbearable heat",
+    "url": "/api/2024/damage-types/fire",
+    "updated_at": "2026-04-23T07:06:26.645Z"
+  },
+  {
+    "index": "force",
+    "name": "Force",
+    "description": "Pure magical energy",
+    "url": "/api/2024/damage-types/force",
+    "updated_at": "2026-04-23T07:06:26.645Z"
+  },
+  {
+    "index": "lightning",
+    "name": "Lightning",
+    "description": "Electricity",
+    "url": "/api/2024/damage-types/lightning",
+    "updated_at": "2026-04-23T07:06:26.645Z"
+  },
+  {
+    "index": "necrotic",
+    "name": "Necrotic",
+    "description": "Life-draining energy",
+    "url": "/api/2024/damage-types/necrotic",
+    "updated_at": "2026-04-23T07:06:26.645Z"
+  },
+  {
+    "index": "piercing",
+    "name": "Piercing",
+    "description": "Fangs, puncturing objects",
+    "url": "/api/2024/damage-types/piercing",
+    "updated_at": "2026-04-23T07:06:26.645Z"
+  },
+  {
+    "index": "poison",
+    "name": "Poison",
+    "description": "Toxic gas, venom",
+    "url": "/api/2024/damage-types/poison",
+    "updated_at": "2026-04-23T07:06:26.645Z"
+  },
+  {
+    "index": "psychic",
+    "name": "Psychic",
+    "description": "Mind-rending energy",
+    "url": "/api/2024/damage-types/psychic",
+    "updated_at": "2026-04-23T07:06:26.645Z"
+  },
+  {
+    "index": "radiant",
+    "name": "Radiant",
+    "description": "Holy energy, searing radiation",
+    "url": "/api/2024/damage-types/radiant",
+    "updated_at": "2026-04-23T07:06:26.645Z"
+  },
+  {
+    "index": "slashing",
+    "name": "Slashing",
+    "description": "Claws, cutting objects",
+    "url": "/api/2024/damage-types/slashing",
+    "updated_at": "2026-04-23T07:06:26.645Z"
+  },
+  {
+    "index": "thunder",
+    "name": "Thunder",
+    "description": "Concussive sound",
+    "url": "/api/2024/damage-types/thunder",
+    "updated_at": "2026-04-23T07:06:26.645Z"
+  }
+]

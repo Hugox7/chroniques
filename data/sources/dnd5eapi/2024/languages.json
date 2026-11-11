@@ -1,0 +1,154 @@
+[
+  {
+    "index": "abyssal",
+    "name": "Abyssal",
+    "is_rare": true,
+    "note": "",
+    "url": "/api/2024/languages/abyssal",
+    "updated_at": "2026-04-23T07:06:27.406Z"
+  },
+  {
+    "index": "celestial",
+    "name": "Celestial",
+    "is_rare": true,
+    "note": "",
+    "url": "/api/2024/languages/celestial",
+    "updated_at": "2026-04-23T07:06:27.406Z"
+  },
+  {
+    "index": "common",
+    "name": "Common",
+    "is_rare": false,
+    "note": "",
+    "url": "/api/2024/languages/common",
+    "updated_at": "2026-04-23T07:06:27.406Z"
+  },
+  {
+    "index": "common-sign-language",
+    "name": "Common Sign Language",
+    "is_rare": false,
+    "note": "",
+    "url": "/api/2024/languages/common-sign-language",
+    "updated_at": "2026-04-23T07:06:27.406Z"
+  },
+  {
+    "index": "deep-speech",
+    "name": "Deep Speech",
+    "is_rare": true,
+    "note": "",
+    "url": "/api/2024/languages/deep-speech",
+    "updated_at": "2026-04-23T07:06:27.406Z"
+  },
+  {
+    "index": "draconic",
+    "name": "Draconic",
+    "is_rare": false,
+    "note": "",
+    "url": "/api/2024/languages/draconic",
+    "updated_at": "2026-04-23T07:06:27.406Z"
+  },
+  {
+    "index": "druidic",
+    "name": "Druidic",
+    "is_rare": false,
+    "note": "",
+    "url": "/api/2024/languages/druidic",
+    "updated_at": "2026-04-23T07:06:27.406Z"
+  },
+  {
+    "index": "dwarvish",
+    "name": "Dwarvish",
+    "is_rare": false,
+    "note": "",
+    "url": "/api/2024/languages/dwarvish",
+    "updated_at": "2026-04-23T07:06:27.406Z"
+  },
+  {
+    "index": "elvish",
+    "name": "Elvish",
+    "is_rare": false,
+    "note": "",
+    "url": "/api/2024/languages/elvish",
+    "updated_at": "2026-04-23T07:06:27.406Z"
+  },
+  {
+    "index": "giant",
+    "name": "Giant",
+    "is_rare": false,
+    "note": "",
+    "url": "/api/2024/languages/giant",
+    "updated_at": "2026-04-23T07:06:27.406Z"
+  },
+  {
+    "index": "gnomish",
+    "name": "Gnomish",
+    "is_rare": false,
+    "note": "",
+    "url": "/api/2024/languages/gnomish",
+    "updated_at": "2026-04-23T07:06:27.406Z"
+  },
+  {
+    "index": "goblin",
+    "name": "Goblin",
+    "is_rare": false,
+    "note": "",
+    "url": "/api/2024/languages/goblin",
+    "updated_at": "2026-04-23T07:06:27.406Z"
+  },
+  {
+    "index": "halfling",
+    "name": "Halfling",
+    "is_rare": false,
+    "note": "",
+    "url": "/api/2024/languages/halfling",
+    "updated_at": "2026-04-23T07:06:27.406Z"
+  },
+  {
+    "index": "infernal",
+    "name": "Infernal",
+    "is_rare": true,
+    "note": "",
+    "url": "/api/2024/languages/infernal",
+    "updated_at": "2026-04-23T07:06:27.406Z"
+  },
+  {
+    "index": "orc",
+    "name": "Orc",
+    "is_rare": false,
+    "note": "",
+    "url": "/api/2024/languages/orc",
+    "updated_at": "2026-04-23T07:06:27.406Z"
+  },
+  {
+    "index": "primordial",
+    "name": "Primordial",
+    "is_rare": true,
+    "note": "Primordial includes the Aquan, Auran, Ignan, and Terran dialects. Creatures that know one of these dialects can communicate with those that know a different one.",
+    "url": "/api/2024/languages/primordial",
+    "updated_at": "2026-04-23T07:06:27.406Z"
+  },
+  {
+    "index": "sylvan",
+    "name": "Sylvan",
+    "is_rare": true,
+    "note": "",
+    "url": "/api/2024/languages/sylvan",
+    "updated_at": "2026-04-23T07:06:27.406Z"
+  },
+  {
+    "index": "thieves-cant",
+    "name": "Thieves' Cant",
+    "is_rare": true,
+    "note": "",
+    "url": "/api/2024/languages/thieves-cant",
+    "updated_at": "2026-04-23T07:06:27.406Z"
+  },
+  {
+    "index": "undercommon",
+    "name": "Undercommon",
+    "is_rare": true,
+    "note": "",
+    "url": "/api/2024/languages/undercommon",
+    "updated_at": "2026-04-23T07:06:27.406Z"
+  }
+]

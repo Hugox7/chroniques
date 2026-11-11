@@ -1,0 +1,11 @@
+import { readFileSync } from 'node:fs';
+import assert from 'node:assert/strict';
+const journal = readFileSync('components/campaign-journal.tsx','utf8');
+const control = readFileSync('components/campaign-character-control.tsx','utf8');
+const migration = readFileSync('supabase/migrations/20261109000100_typed_damage_2014.sql','utf8');
+assert.match(journal, /kind==='damage'\s*\?\s*await supabase\(\)\.rpc\('apply_campaign_typed_damage_2014'/);
+assert.match(journal, /p_damage_type:damageType/);
+assert.match(journal, /value=\{damageType\}/);
+assert.match(control, /rpc\('apply_campaign_typed_damage_2014'/);
+assert.match(migration, /p_damage_type in/);
+console.log('OK: journal and character control route typed damage to server RPC.');

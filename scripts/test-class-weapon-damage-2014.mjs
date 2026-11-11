@@ -1,0 +1,22 @@
+import assert from 'node:assert/strict';
+import {rageWeaponBonus2014,sneakAttackDice2014,sneakAttackEligible2014,sneakAttackDamage2014,divineSmiteEligible2014,divineSmiteDice2014} from '../lib/class-weapon-damage-2014.ts';
+assert.equal(rageWeaponBonus2014({className:'Barbare',level:9,active:true,heavyArmor:false,ability:'FOR',melee:true}),3);
+assert.equal(rageWeaponBonus2014({className:'Barbare',level:9,active:true,heavyArmor:true,ability:'FOR',melee:true}),0);
+assert.equal(rageWeaponBonus2014({className:'Barbare',level:9,active:true,heavyArmor:false,ability:'DEX',melee:true}),0);
+assert.equal(sneakAttackDice2014(1),1);assert.equal(sneakAttackDice2014(5),3);assert.equal(sneakAttackDice2014(20),10);
+assert.equal(sneakAttackEligible2014({className:'Roublard',level:3,finesse:true,ranged:false}),true);
+assert.equal(sneakAttackEligible2014({className:'Roublard',level:3,finesse:false,ranged:false}),false);
+assert.equal(sneakAttackDamage2014([2,4,6],5,false),12);
+assert.equal(sneakAttackDamage2014([1,2,3,4,5,6],5,true),21);
+assert.throws(()=>sneakAttackDamage2014([7,2,3],5,false));
+console.log('11 contrôles capacités de dégâts 2014 OK');
+
+assert.equal(divineSmiteEligible2014('Paladin',2,true),true);
+assert.equal(divineSmiteEligible2014('Paladin',1,true),false);
+assert.equal(divineSmiteEligible2014('Paladin',2,false),false);
+assert.equal(divineSmiteEligible2014('Clerc',20,true),false);
+assert.deepEqual([1,2,3,4,5].map(level=>divineSmiteDice2014(level,false,false)),[2,3,4,5,5]);
+assert.equal(divineSmiteDice2014(4,true,false),6);
+assert.equal(divineSmiteDice2014(5,true,true),12);
+assert.throws(()=>divineSmiteDice2014(0,false,false),RangeError);
+console.log('8 contrôles Châtiment divin 2014 OK');

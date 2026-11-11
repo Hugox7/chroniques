@@ -29,7 +29,7 @@ code=(ROOT/'components/avatar-builder.tsx').read_text()
 for marker in ['readAvatar','writeAvatar','AvatarPortrait','AvatarBuilder','exportPortrait','undoStack','redoStack']:
  check(marker in code,'Avatar integration: '+marker)
 check('CD_AVATAR_V1:' in code,'Avatar serialization format unchanged')
-check('painted?720:540' in code,'Painted export keeps 2:3 aspect ratio')
+check(bool(re.search(r'width\s*=\s*480\s*,\s*height\s*=\s*painted\s*\?\s*720\s*:\s*540', code)) and 'canvas.width = width' in code and 'canvas.height = height' in code, 'Painted export keeps 2:3 aspect ratio')
 print(f'\n{len(failures)} preflight failures')
 if failures:
  print('\n'.join(failures));sys.exit(1)

@@ -1,16 +1,21 @@
-"use client";
+'use client';
+import CampaignDamageDefenses2014 from '@/components/campaign-damage-defenses-2014';
+import CampaignDocuments from '@/components/campaign-documents';
+import CampaignEconomy from '@/components/campaign-economy';
+import CampaignChronicle from '@/components/campaign-chronicle';
+import CampaignNavigation, { type CampaignView } from '@/components/campaign-navigation';
+import CampaignCharacterSheetDrawer from '@/components/campaign-character-sheet-drawer';
+import CampaignBottomSheet from '@/components/campaign-bottom-sheet';
 import GameSessions from '@/components/game-sessions';
 import GMCharacterCorrection from '@/components/gm-character-correction';
 
-import CampaignCharacterControl from "@/components/campaign-character-control";
 import CampaignJournal from "@/components/campaign-journal";
-import Shell from "@/components/shell";
 import { useParams, useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { supabase } from "@/lib/supabase";
 import { Character } from "@/lib/rules";
 import Link from "next/link";
-import { ArrowLeft, Send, Users } from "lucide-react";
+import { BookOpen, MessageCircle, Send, Users } from "lucide-react";
 
 type CampaignStatus = 'draft' | 'recruiting' | 'active' | 'paused' | 'completed';
 const campaignStatuses: {value:CampaignStatus;label:string}[] = [
@@ -82,6 +87,15 @@ export default function CampaignPage() {
   const [campaignInvites, setCampaignInvites] = useState<CampaignInvite[]>([]);
   const [statusBusy, setStatusBusy] = useState(false);
   const [editingCampaign, setEditingCampaign] = useState(false);
+  const [managementOpen, setManagementOpen] = useState(false);
+  const [activeSession, setActiveSession] = useState<{id: string; startedAt: string} | null>(null);
+  const [mjView, setMjView] = useState<CampaignView>('session');
+  const [economyVisited, setEconomyVisited] = useState(false);
+  const [journalView, setJournalView] = useState<'events'|'chronicle'>('events');
+  const [discussionOpen, setDiscussionOpen] = useState(false);
+  const discussionDialog = useRef<HTMLDialogElement>(null);
+  const [sheetCharacterId, setSheetCharacterId] = useState<string|null>(null);
+  const [discussionRead, setDiscussionRead] = useState({ key: '', through: '' });
   const [draftTitle, setDraftTitle] = useState("");
   const [draftDescription, setDraftDescription] = useState("");
   const [savingCampaign, setSavingCampaign] = useState(false);
@@ -114,7 +128,7 @@ export default function CampaignPage() {
           .from("campaign_messages")
           .select("*")
           .eq("campaign_id", id)
-          .order("created_at", { ascending: true })
+          .order("created_at", { ascending: false })
           .limit(100),
         s.from("characters").select("*"),
       ]);
@@ -122,16 +136,18 @@ export default function CampaignPage() {
       if (!stillCurrent()) return;
       for (const result of [a, b, c, d]) if (result.error) throw result.error;
 
+      const campaignMessages = (c.data ?? []).slice().reverse();
+
       setCampaign(a.data);
       setMembers(b.data ?? []);
-      setMessages(dedup(c.data ?? []));
+      setMessages(dedup(campaignMessages));
       setCharacters(d.data ?? []);
 
       const ids = [
         ...new Set([
           a.data.owner_id,
           ...(b.data ?? []).map((x: Member) => x.user_id),
-          ...(c.data ?? []).map((x: Message) => x.author_id),
+          ...campaignMessages.map((x: Message) => x.author_id),
         ]),
       ];
 
@@ -189,6 +205,14 @@ export default function CampaignPage() {
     currentCampaignId.current = id;
     loadGeneration.current++;
     setCampaign(null);
+    setMjView('session');
+    setEconomyVisited(false);
+    setJournalView('events');
+    setDiscussionOpen(false);
+    discussionDialog.current?.close();
+    setSheetCharacterId(null);
+    setActiveSession(null);
+    setManagementOpen(false);
     setMembers([]);
     setCharacters([]);
     setMessages([]);
@@ -262,6 +286,7 @@ export default function CampaignPage() {
     const waiting=campaignInvites.filter(i=>!i.accepted_at&&!i.declined_at&&!i.revoked_at&&(!i.expires_at||new Date(i.expires_at)>new Date())).length;
     if(next==='active' && (notReady>0||waiting>0) && !window.confirm(
       `${notReady} joueur(s) sans personnage et ${waiting} invitation(s) en attente. Lancer quand même la campagne ?`))return;
+    if(next==='paused'&&!window.confirm('Mettre la campagne en pause ?'))return;
     if(next==='completed'&&!window.confirm('Terminer définitivement cette campagne ? Elle restera consultable, mais ne pourra plus être rouverte.'))return;
     setStatusBusy(true);setError('');
     const {error}=await supabase().from('campaigns').update({status:next}).eq('id',id).eq('owner_id',me);
@@ -316,7 +341,7 @@ export default function CampaignPage() {
 
   async function addInvite(e: React.FormEvent) {
     e.preventDefault();
-    if(campaign?.status==='draft') {setError("Ouvrez le recrutement avant d’inviter des joueurs.");return;}
+    if(campaign?.status!=='recruiting') {setError("Les invitations sont disponibles uniquement pendant le recrutement.");return;}
     setError("");
     setInviteNotice("");
 
@@ -354,7 +379,7 @@ export default function CampaignPage() {
   }
 
   async function inviteCompanion(userId: string) {
-    if(campaign?.status==='draft') {setError("Ouvrez le recrutement avant d’inviter des joueurs.");return;}
+    if(campaign?.status!=='recruiting') {setError("Les invitations sont disponibles uniquement pendant le recrutement.");return;}
     setInvitingId(userId);
     setError("");
     setInviteNotice("");
@@ -408,21 +433,125 @@ export default function CampaignPage() {
     }
   }
 
-  return (
-    <Shell>
-      <Link href="/dashboard" className="back-link">
-        <ArrowLeft size={15} /> Mes campagnes
-      </Link>
+  const discussionKey = me && campaign ? `cd-discussion:${me}:${id}` : '';
+  const lastMessageAt = messages.at(-1)?.created_at ?? '';
+  useEffect(() => {
+    if (!discussionKey) return;
+    let through = '';
+    try { through = localStorage.getItem(discussionKey) ?? ''; } catch {}
+    setDiscussionRead({ key: discussionKey, through });
+  }, [discussionKey]);
+  useEffect(() => {
+    if (!discussionKey || !lastMessageAt || !discussionOpen) return;
+    setDiscussionRead({ key: discussionKey, through: lastMessageAt });
+    try { localStorage.setItem(discussionKey, lastMessageAt); } catch {}
+  }, [discussionKey, lastMessageAt, discussionOpen]);
 
+  const unreadMessages = discussionRead.key === discussionKey
+    ? messages.filter(message => message.author_id !== me && message.created_at > discussionRead.through).length : 0;
+  function showMjView(view: CampaignView) {
+    if (view === 'company' || view === 'shops') setEconomyVisited(true);
+    if (view === mjView) return;
+    setMjView(view);
+    window.scrollTo(0, 0);
+  }
+  function renderDiscussion() {
+    if (!campaign) return null;
+    return (
+            <div className="panel chat">
+              <h2>{me === campaign.owner_id ? 'Discussion' : '✉ Discussion de campagne'}</h2>
+
+              {campaign.status === "draft" && <p className="hint">Messagerie indisponible tant que la campagne est en brouillon.</p>}
+              {campaign.status !== "draft" && <div className="messages">
+                {messages.length === 0 && (
+                  <p className="muted">
+                    Le silence règne encore dans la taverne…
+                  </p>
+                )}
+
+                {messages.map((m) => (
+                  <div
+                    className={`message ${m.author_id === me ? "own" : ""}`}
+                    key={m.id}
+                  >
+                    <small>
+                      {username(m.author_id)}
+                      {m.author_id === campaign.owner_id ? " · MJ" : ""}
+                      {" · "}
+                      {new Date(m.created_at).toLocaleString("fr-FR")}
+                    </small>
+
+                    <p>{m.body}</p>
+                  </div>
+                ))}
+              </div>}
+
+              {campaign.status !== "draft" && <form className="message-form" onSubmit={send}>
+                <input
+                  className="field"
+                  maxLength={2000}
+                  value={body}
+                  onChange={(e) => setBody(e.target.value)}
+                  placeholder="Écrire à votre compagnie…"
+                />
+
+                <button className="btn gold" aria-label="Envoyer">
+                  <Send size={17} />
+                </button>
+              </form>}
+            </div>
+    );
+  }
+
+  const myCharacter = characters.find(character => character.owner_id === me && members.some(member => member.user_id === me && member.character_id === character.id));
+  const sheetCharacter = characters.find(character => character.id === sheetCharacterId && members.some(member => member.character_id === character.id)
+    && (me === campaign?.owner_id || character.id === myCharacter?.id)) ?? null;
+
+  return (
+    <>
       {error && <div className="notice error">{error}</div>}
 
       {campaign && (
         <>
-          <div className="page-head">
+          <div className="page-head mj-page-head">
             <span className="eyebrow">CAMPAGNE PRIVÉE</span>
-            <h1>{campaign.title}</h1>
-            <p>{campaign.description || "Aucun synopsis pour le moment."}</p>
-            {me===campaign.owner_id && !editingCampaign && <button type="button" className="btn outline" onClick={beginCampaignEdit}>Modifier le titre et le synopsis</button>}
+            <div className="campaign-heading mj-heading">
+              <div className="campaign-title-line">
+                <h1>{campaign.title}</h1>
+                <span className="campaign-status-chip" data-status={campaign.status}>
+                  {campaignStatuses.find(status => status.value === campaign.status)?.label || 'Brouillon'}
+                </span>
+              </div>
+              {me === campaign.owner_id && <div className="campaign-management" onKeyDown={event => {
+                if (event.key === 'Escape' && managementOpen) {
+                  setManagementOpen(false);
+                  event.currentTarget.querySelector<HTMLButtonElement>('.campaign-management-toggle')?.focus();
+                }
+              }}>
+                <button className="btn outline campaign-management-toggle" type="button"
+                  aria-expanded={managementOpen} aria-controls="campaign-management-actions"
+                  aria-label="Actions de campagne" onClick={() => setManagementOpen(open => !open)}>⋯</button>
+                <div id="campaign-management-actions" className="campaign-management-panel" data-open={managementOpen}>
+                  {!editingCampaign && <button type="button" className="btn outline" onClick={() => {
+                    setManagementOpen(false);
+                    beginCampaignEdit();
+                  }}>Modifier le titre et le synopsis</button>}
+                  {campaign.status === 'draft' && <button type="button" className="btn gold" disabled={statusBusy}
+                    onClick={() => void changeStatus('recruiting')}>Ouvrir le recrutement</button>}
+                  {campaign.status === 'recruiting' && <button type="button" className="btn gold" disabled={statusBusy}
+                    onClick={() => void changeStatus('active')}>Lancer la campagne</button>}
+                  {campaign.status === 'active' && <button type="button" className="btn outline" disabled={statusBusy}
+                    onClick={() => void changeStatus('paused')}>Mettre en pause</button>}
+                  {campaign.status === 'paused' && <button type="button" className="btn gold" disabled={statusBusy}
+                    onClick={() => void changeStatus('active')}>Reprendre la campagne</button>}
+                  {(campaign.status === 'active' || campaign.status === 'paused') && <button type="button" className="btn outline"
+                    disabled={statusBusy} onClick={() => void changeStatus('completed')}>Terminer la campagne</button>}
+                  <button type="button" className="btn outline campaign-delete" disabled={deletingCampaign}
+                    onClick={() => void deleteCampaign()}>{deletingCampaign ? 'Suppression…' : 'Supprimer la campagne'}</button>
+                </div>
+              </div>}
+            </div>
+            <p className="campaign-synopsis">{campaign.description || "Aucun synopsis pour le moment."}</p>
             {me===campaign.owner_id && editingCampaign && <form className="panel" onSubmit={saveCampaignDetails} style={{marginTop:12}}>
               <h3>Préparer la campagne</h3>
               <label className="field-label" htmlFor="edit-campaign-title">Titre</label>
@@ -434,21 +563,50 @@ export default function CampaignPage() {
                 <button className="btn outline" type="button" disabled={savingCampaign} onClick={()=>setEditingCampaign(false)}>Annuler</button>
               </div>
             </form>}
-            <p className="hint">Statut : <strong>{campaignStatuses.find(s=>s.value===campaign.status)?.label||'Brouillon'}</strong></p>
-            {me===campaign.owner_id&&<div className="panel" style={{marginTop:16}}>
-              <span className="field-label">ÉTAT DE LA CAMPAGNE</span>
-              <p><strong>{campaignStatuses.find(s=>s.value===campaign.status)?.label}</strong></p>
-              {campaign.status==='draft'&&<><p className="hint">Préparez votre aventure avant d'accueillir les joueurs.</p><button type="button" className="btn gold" disabled={statusBusy} onClick={()=>void changeStatus('recruiting')}>Ouvrir le recrutement</button></>}
-              {campaign.status==='recruiting'&&<><p className="hint">Les joueurs peuvent rejoindre la compagnie. Le lancement de la campagne est définitif.</p><button type="button" className="btn gold" disabled={statusBusy} onClick={()=>void changeStatus('active')}>Lancer la campagne</button></>}
-              {campaign.status==='active'&&<div className="campaign-status-actions"><button type="button" className="btn outline" disabled={statusBusy} onClick={()=>void changeStatus('paused')}>Mettre en pause</button><button type="button" className="btn outline" disabled={statusBusy} onClick={()=>void changeStatus('completed')}>Terminer la campagne</button></div>}
-              {campaign.status==='paused'&&<div className="campaign-status-actions"><button type="button" className="btn gold" disabled={statusBusy} onClick={()=>void changeStatus('active')}>Reprendre la campagne</button><button type="button" className="btn outline" disabled={statusBusy} onClick={()=>void changeStatus('completed')}>Terminer la campagne</button></div>}
-              {campaign.status==='completed'&&<p className="hint">Campagne terminée : ce statut est définitif.</p>}
-              <div className="campaign-danger-zone"><p className="hint">Zone de danger · cette action ne peut pas être annulée.</p>
-              <button type="button" className="btn outline" style={{marginTop:16}} disabled={deletingCampaign} onClick={()=>void deleteCampaign()}>{deletingCampaign?"Suppression…":"Supprimer définitivement cette campagne"}</button></div>
-            </div>}
+
           </div>
 
-          <div className="campaign-layout">
+          <div className="campaign-quick-actions">
+            {me !== campaign.owner_id && <button className="btn gold campaign-my-sheet" type="button"
+              onClick={() => myCharacter ? setSheetCharacterId(myCharacter.id) : showMjView('company')}>
+              <BookOpen size={18} aria-hidden="true"/> {myCharacter ? 'Ma fiche' : 'Choisir mon personnage'}
+            </button>}
+            <button className="btn outline campaign-discussion-button" type="button" aria-haspopup="dialog"
+              onClick={() => { discussionDialog.current?.showModal(); setDiscussionOpen(true); }}>
+              <MessageCircle size={18} aria-hidden="true"/> Discussion
+              {unreadMessages > 0 && <span className="mj-unread" aria-label={`${unreadMessages} messages non lus`}>{unreadMessages}</span>}
+            </button>
+          </div>
+          <CampaignNavigation view={mjView} onChange={showMjView}/>
+          {mjView === 'journal' && <div className="campaign-section-heading" id="campaign-view-journal">
+            <h2>Journal de la campagne</h2>
+            <div className="campaign-subnav" aria-label="Contenu du journal">
+              <button className="btn outline" type="button" aria-pressed={journalView === 'events'} onClick={() => setJournalView('events')}>Historique des actions</button>
+              <button className="btn outline" type="button" aria-pressed={journalView === 'chronicle'} onClick={() => setJournalView('chronicle')}>Bilans de séance</button>
+            </div>
+          </div>}
+          <div className="mj-workspace" data-view={mjView}>
+            <div className="mj-session-view" id="campaign-view-session" hidden={mjView !== 'session'}>
+              <GameSessions campaignId={id} isGM={me === campaign.owner_id} me={me} campaignStatus={campaign.status} participants={members}
+                gmId={campaign.owner_id} onActiveSessionChange={setActiveSession} characters={characters.filter(character => members.some(member => member.character_id === character.id))}/>
+            </div>
+            <div className="mj-journal-view" hidden={mjView !== 'session' && !(mjView === 'journal' && journalView === 'events')}>
+              <CampaignJournal key={id} campaignId={id} ownerId={campaign.owner_id} me={me}
+                members={members} characters={characters} profiles={profiles} compact
+                recentLimit={mjView === 'journal' && journalView === 'events' ? undefined : 6} activeSession={activeSession}
+                onViewAll={() => { setJournalView('events'); showMjView('journal'); }}/>
+            </div>
+          </div>
+          {mjView === 'journal' && journalView === 'chronicle' && <div className="campaign-journal-content">
+            <CampaignChronicle key={'chronicle-' + id} campaignId={id} title={campaign.title} isGM={me === campaign.owner_id}/>
+          </div>}
+          <div className="campaign-company-area" data-view={mjView}>
+          <div className="campaign-company-view" id="campaign-view-company" hidden={mjView !== 'company'}>
+          <details className="mj-disclosure mj-mobile-synopsis">
+            <summary>Synopsis de la campagne</summary>
+            <p>{campaign.description || "Aucun synopsis pour le moment."}</p>
+          </details>
+          <div>
             <div className="panel" id="campaign-company" style={{scrollMarginTop:24}}>
               <h2>
                 <Users size={20} /> La compagnie
@@ -469,7 +627,16 @@ export default function CampaignPage() {
                     : m.character_id
                       ? <span className="campaign-member-character">{characters.find(c=>c.id===m.character_id)?.name||'Personnage associé'}</span>
                       : <span className="campaign-member-chip">Aucun personnage sélectionné</span>}
-
+                  {m.character_id && (me === campaign.owner_id || m.user_id === me) && characters.some(c => c.id === m.character_id) &&
+                    <button type="button" className="btn outline" onClick={() => setSheetCharacterId(m.character_id)}>Fiche complète de {characters.find(c => c.id === m.character_id)?.name}</button>}
+                  {me === campaign.owner_id && (() => {
+                    const character = characters.find(c => c.id === m.character_id);
+                    return character && <details className="mj-disclosure campaign-member-tools">
+                      <summary>Outils MJ · {character.name}</summary>
+                      <CampaignDamageDefenses2014 campaignId={id} character={character}/>
+                      <GMCharacterCorrection campaignId={id} character={character} enabled={m.allow_gm_outside_session} onSaved={load}/>
+                    </details>;
+                  })()}
                 </div>
               ))}</div>
 
@@ -490,7 +657,7 @@ export default function CampaignPage() {
                     >
                       <option value="">Aucun personnage sélectionné</option>
 
-                      {characters.map((c) => (
+                      {characters.filter(c => c.owner_id === me).map((c) => (
                         <option value={c.id} key={c.id}>
                           {c.name}
                         </option>
@@ -509,8 +676,9 @@ export default function CampaignPage() {
                 )}
 
               {me === campaign.owner_id && campaign.status === "draft" && <p className="hint">Invitations indisponibles en brouillon. Passez au statut Recrutement pour constituer votre compagnie.</p>}
-              {me === campaign.owner_id && campaign.status !== "draft" && (
-                <>
+              {me === campaign.owner_id && campaign.status === "recruiting" && (
+                <details className="mj-disclosure campaign-invitations">
+                  <summary>Gérer les invitations</summary>
                   <div className="recent-companions" style={{marginBottom:20}}>
                     <h3>Suivi de la compagnie</h3>
                     <p className="hint">{campaignInvites.filter(i=>inviteStatus(i)==='En attente').length} invitation(s) en attente · {members.filter(m=>m.user_id!==campaign.owner_id).length} joueur(s) inscrit(s) · {members.filter(m=>m.user_id!==campaign.owner_id&&m.character_id).length} personnage(s) associé(s)</p>
@@ -584,52 +752,10 @@ export default function CampaignPage() {
                       </div>
                     )}
                   </div>
-                </>
+                </details>
               )}
             </div>
 
-            <div className="panel chat">
-              <h2>✉ Discussion de campagne</h2>
-
-              {campaign.status === "draft" && <p className="hint">Messagerie indisponible tant que la campagne est en brouillon.</p>}
-              {campaign.status !== "draft" && <div className="messages">
-                {messages.length === 0 && (
-                  <p className="muted">
-                    Le silence règne encore dans la taverne…
-                  </p>
-                )}
-
-                {messages.map((m) => (
-                  <div
-                    className={`message ${m.author_id === me ? "own" : ""}`}
-                    key={m.id}
-                  >
-                    <small>
-                      {username(m.author_id)}
-                      {m.author_id === campaign.owner_id ? " · MJ" : ""}
-                      {" · "}
-                      {new Date(m.created_at).toLocaleString("fr-FR")}
-                    </small>
-
-                    <p>{m.body}</p>
-                  </div>
-                ))}
-              </div>}
-
-              {campaign.status !== "draft" && <form className="message-form" onSubmit={send}>
-                <input
-                  className="field"
-                  maxLength={2000}
-                  value={body}
-                  onChange={(e) => setBody(e.target.value)}
-                  placeholder="Écrire à votre compagnie…"
-                />
-
-                <button className="btn gold" aria-label="Envoyer">
-                  <Send size={17} />
-                </button>
-              </form>}
-            </div>
           </div>
 
           {me!==campaign.owner_id && members.some(m=>m.user_id===me && m.character_id) && (
@@ -644,49 +770,20 @@ export default function CampaignPage() {
               <p className="hint">Désactivé par défaut et révocable à tout moment. Les modifications sont consignées dans le journal.</p>
             </section>
           )}
-          <GameSessions campaignId={id} isGM={me === campaign.owner_id} campaignStatus={campaign.status} participants={members} gmId={campaign.owner_id} />
-          <div className="campaign-sheets" id="campaign-sheets" style={{scrollMarginTop:24}}>
-            <h2>Fiches collaboratives</h2>
-
-            <p className="hint">
-              Le joueur et le maître du jeu peuvent modifier les ressources de
-              la campagne. Chaque action est historisée.
-            </p>
-
-            {members
-              .filter((m) => m.character_id)
-              .map((m) => {
-                const character = characters.find(
-                  (c) => c.id === m.character_id,
-                );
-
-                return character ? (
-                  <CampaignCharacterControl
-                    key={character.id}
-                    campaignId={id}
-                    character={character}
-                    me={me}
-                    canEdit={me === campaign.owner_id || m.user_id === me}
-                  />
-                ) : null;
-              })}
           </div>
-
-          {me===campaign.owner_id&&members.filter(m=>m.character_id).map(m=>{
-            const ch=characters.find(c=>c.id===m.character_id);
-            return ch?<GMCharacterCorrection key={ch.id} campaignId={id} character={ch}
-              enabled={m.allow_gm_outside_session} onSaved={load}/>:null;
-          })}
-          <div id="campaign-journal" style={{scrollMarginTop:24}}><CampaignJournal
-            campaignId={id}
-            ownerId={campaign.owner_id}
-            me={me}
-            members={members}
-            characters={characters}
-            profiles={profiles}
-          /></div>
+          <div id="campaign-view-shops" className="campaign-economy-space" hidden={mjView !== 'company' && mjView !== 'shops'}>
+            {economyVisited && <CampaignEconomy key={id} campaignId={id} me={me} isGM={me === campaign.owner_id} campaignStatus={campaign.status}
+              mode={mjView === 'shops' ? 'shops' : 'vault'}
+              actorNames={Object.fromEntries([[campaign.owner_id, username(campaign.owner_id)], ...members.map(member => [member.user_id, username(member.user_id)])])}/>}
+          </div>
+          </div>
+          <CampaignDocuments key={'documents-' + id} campaignId={id} isGM={me === campaign.owner_id} profiles={profiles} visible={mjView === 'documents'}/>
+          <CampaignBottomSheet side dialogRef={discussionDialog} title="Discussion de campagne" onClose={() => setDiscussionOpen(false)}>
+            {renderDiscussion()}
+          </CampaignBottomSheet>
+          <CampaignCharacterSheetDrawer campaignId={id} character={sheetCharacter} onClose={() => setSheetCharacterId(null)}/>
         </>
       )}
-    </Shell>
+    </>
   );
 }

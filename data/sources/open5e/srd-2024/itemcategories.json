@@ -1,0 +1,40 @@
+[
+  {
+    "key": "equipment-pack",
+    "document": {
+      "name": "System Reference Document 5.2",
+      "key": "srd-2024",
+      "type": "SOURCE",
+      "display_name": "5e 2024 Rules",
+      "publisher": {
+        "name": "Wizards of the Coast",
+        "key": "wizards-of-the-coast"
+      },
+      "gamesystem": {
+        "name": "5th Edition 2024",
+        "key": "5e-2024"
+      },
+      "permalink": "https://dnd.wizards.com/resources/systems-reference-document"
+    },
+    "name": "Equipment Pack"
+  },
+  {
+    "key": "spellcasting-focus",
+    "document": {
+      "name": "System Reference Document 5.2",
+      "key": "srd-2024",
+      "type": "SOURCE",
+      "display_name": "5e 2024 Rules",
+      "publisher": {
+        "name": "Wizards of the Coast",
+        "key": "wizards-of-the-coast"
+      },
+      "gamesystem": {
+        "name": "5th Edition 2024",
+        "key": "5e-2024"
+      },
+      "permalink": "https://dnd.wizards.com/resources/systems-reference-document"
+    },
+    "name": "Spellcasting Focus"
+  }
+]

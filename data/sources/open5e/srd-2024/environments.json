@@ -1,0 +1,230 @@
+[
+  {
+    "key": "arctic",
+    "name": "Arctic or Tundra",
+    "desc": "[None provided]",
+    "aquatic": false,
+    "planar": false,
+    "interior": false,
+    "document": "core",
+    "crossreferences": {
+      "to": []
+    }
+  },
+  {
+    "key": "caves",
+    "name": "Caves",
+    "desc": "Caves and caverns",
+    "aquatic": false,
+    "planar": false,
+    "interior": true,
+    "document": "core",
+    "crossreferences": {
+      "to": []
+    }
+  },
+  {
+    "key": "coast",
+    "name": "Coast",
+    "desc": "[None provided]",
+    "aquatic": false,
+    "planar": false,
+    "interior": false,
+    "document": "core",
+    "crossreferences": {
+      "to": []
+    }
+  },
+  {
+    "key": "desert",
+    "name": "Desert",
+    "desc": "[None provided]",
+    "aquatic": false,
+    "planar": false,
+    "interior": false,
+    "document": "core",
+    "crossreferences": {
+      "to": []
+    }
+  },
+  {
+    "key": "forest",
+    "name": "Forest or Jungle",
+    "desc": "[None provided]",
+    "aquatic": false,
+    "planar": false,
+    "interior": false,
+    "document": "core",
+    "crossreferences": {
+      "to": []
+    }
+  },
+  {
+    "key": "grassland",
+    "name": "Grassland or Plains",
+    "desc": "[None provided]",
+    "aquatic": false,
+    "planar": false,
+    "interior": false,
+    "document": "core",
+    "crossreferences": {
+      "to": []
+    }
+  },
+  {
+    "key": "hills",
+    "name": "Hills",
+    "desc": "[None Provided]",
+    "aquatic": false,
+    "planar": false,
+    "interior": false,
+    "document": "core",
+    "crossreferences": {
+      "to": []
+    }
+  },
+  {
+    "key": "laboratory",
+    "name": "Laboratory",
+    "desc": "[None provided]",
+    "aquatic": false,
+    "planar": false,
+    "interior": true,
+    "document": "core",
+    "crossreferences": {
+      "to": []
+    }
+  },
+  {
+    "key": "lake",
+    "name": "Lake",
+    "desc": "[None provided]",
+    "aquatic": true,
+    "planar": false,
+    "interior": false,
+    "document": "core",
+    "crossreferences": {
+      "to": []
+    }
+  },
+  {
+    "key": "mountain",
+    "name": "Mountain",
+    "desc": "[None provided]",
+    "aquatic": false,
+    "planar": false,
+    "interior": false,
+    "document": "core",
+    "crossreferences": {
+      "to": []
+    }
+  },
+  {
+    "key": "ocean",
+    "name": "Ocean",
+    "desc": "[None provided]",
+    "aquatic": true,
+    "planar": false,
+    "interior": false,
+    "document": "core",
+    "crossreferences": {
+      "to": []
+    }
+  },
+  {
+    "key": "ruins",
+    "name": "Ruins",
+    "desc": "[None provided]",
+    "aquatic": false,
+    "planar": false,
+    "interior": true,
+    "document": "core",
+    "crossreferences": {
+      "to": []
+    }
+  },
+  {
+    "key": "sewer",
+    "name": "Sewer",
+    "desc": "[None provided]",
+    "aquatic": false,
+    "planar": false,
+    "interior": true,
+    "document": "core",
+    "crossreferences": {
+      "to": []
+    }
+  },
+  {
+    "key": "srd_feywild",
+    "name": "Feywild",
+    "desc": "[None provided]",
+    "aquatic": false,
+    "planar": false,
+    "interior": false,
+    "document": "core",
+    "crossreferences": {
+      "to": []
+    }
+  },
+  {
+    "key": "swamp",
+    "name": "Swamp or Marsh",
+    "desc": "[None provided]",
+    "aquatic": false,
+    "planar": false,
+    "interior": false,
+    "document": "core",
+    "crossreferences": {
+      "to": []
+    }
+  },
+  {
+    "key": "temple",
+    "name": "Temple",
+    "desc": "[None provided]",
+    "aquatic": false,
+    "planar": false,
+    "interior": true,
+    "document": "core",
+    "crossreferences": {
+      "to": []
+    }
+  },
+  {
+    "key": "tomb",
+    "name": "Tomb",
+    "desc": "[None provided]",
+    "aquatic": false,
+    "planar": false,
+    "interior": true,
+    "document": "core",
+    "crossreferences": {
+      "to": []
+    }
+  },
+  {
+    "key": "underworld",
+    "name": "Underworld",
+    "desc": "[None Provided]",
+    "aquatic": false,
+    "planar": false,
+    "interior": false,
+    "document": "core",
+    "crossreferences": {
+      "to": []
+    }
+  },
+  {
+    "key": "urban",
+    "name": "Urban",
+    "desc": "[None provided]",
+    "aquatic": false,
+    "planar": false,
+    "interior": false,
+    "document": "core",
+    "crossreferences": {
+      "to": []
+    }
+  }
+]
